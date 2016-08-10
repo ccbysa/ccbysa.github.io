@@ -1,0 +1,63 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>Android入门教程（3） | Hexo</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/4.2.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Android入门教程（3）</h1><a id="logo" href="/.">Hexo</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> Home</i></a><a href="/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/about/"><i class="fa fa-user"> About</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Android入门教程（3）</h1><div class="post-meta">Aug 10, 2016<script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><h2 id="Android-开发环境搭建"><a href="#Android-开发环境搭建" class="headerlink" title="Android 开发环境搭建"></a>Android 开发环境搭建</h2><ol>
+<li>下载并安装 JDK</li>
+<li>下载并安装 Android Studio</li>
+</ol>
+<h2 id="安装第一个-App"><a href="#安装第一个-App" class="headerlink" title="安装第一个 App"></a>安装第一个 App</h2><ol>
+<li><p>在‘设置’——‘关于手机’——‘版本号’，连续点击7次</p>
+</li>
+<li><p>返回，找到‘开发者选项’并打开</p>
+</li>
+<li><p>开启‘USB调试’</p>
+</li>
+<li><p>把手机连上电脑。（Windows系统）需要下载 Android 驱动。google search ‘oem Android’</p>
+</li>
+<li><p>点击 <strong> 绿色的三角形 </strong>按钮，选择你的手机</p>
+</li>
+<li><p>如果没有意外，显示如下<br><img src="/images/PS1_1.jpg" alt="第一个App"></p>
+</li>
+<li><p><strong>OK</strong>之后，手机屏幕就显示</p>
+</li>
+</ol>
+<h2 id="制作生日贺卡"><a href="#制作生日贺卡" class="headerlink" title="制作生日贺卡"></a>制作生日贺卡</h2><ol>
+<li>选择需要的 view （使用什么布局类型？LinearLayout or RelativeLayout；有哪些 view？）</li>
+</ol>
+<ul>
+<li>如何布置 view</li>
+<li>view 的风格</li>
+<li>效果图如下：<br><img src="/images/PS1_2.jpg" alt="生日贺卡"><br><strong>注意：有很多 padding 需要删除</strong></li>
+<li>在手机上运行的效果图如下<br><img src="/images/PS1_3.jpg" alt="在手机运行效果"></li>
+<li>添加边距 使用 margin参数<br><img src="/images/PS1_4.jpg" alt="增加边距后"></li>
+<li>最后在手机上运行效果<br><img src="/images/PS1_5.jpg" alt="最后效果图"></li>
+</ul>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ol>
+<li>图片资源放在 <strong>../res/drawable/</strong> 下</li>
+</ol>
+<ul>
+<li>android:src 属性值不需要加后缀</li>
+<li>依据view出现的顺序依次放置,如果次序有误,可能导致覆盖</li>
+<li>一个好的APP应该创造更多价值，而不是炒作</li>
+</ul>
+<h2 id="出现过的问题"><a href="#出现过的问题" class="headerlink" title="出现过的问题"></a>出现过的问题</h2><ol>
+<li><p>Preview 时报错：Android Studio: Rendering Problems Exception raised during rendering: com.android.ide.common.rendering.api.LayoutlibCallback</p>
+<p><strong>解决办法：</strong> <a href="http://stackoverflow.com/questions/35914565/android-studio-rendering-problems-exception-raised-during-rendering-com-androi" target="_blank" rel="external">链接在此</a>把 preview中选择 <strong> API 23 </strong></p>
+</li>
+</ol>
+<ul>
+<li>ImageView属性默认有很多（<strong>就是 RelativeLayout 的属性值</strong>） padding，需要删掉</li>
+</ul>
+<h2 id="view-属性巩固"><a href="#view-属性巩固" class="headerlink" title="view 属性巩固"></a>view 属性巩固</h2><ul>
+<li>textStyle 字体风格:粗体 斜体</li>
+<li>testAlignment 左对齐 右对齐 居中</li>
+<li><p>fontFamily 设置字体</p>
+</li>
+<li><p>src 图片</p>
+</li>
+<li>scaleType 图片尺寸<ul>
+<li>certer居中显示,不改变大小</li>
+<li>centerCrop 居中拉伸</li>
+</ul>
+</li>
+<li>layout_width 图片框宽度</li>
+<li>layout_height 图片框高度</li>
+</ul>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://yoursite.com/2016/08/10/PS1+Coffee/" data-id="ciro9yr9f0008s8ujos9yfv7z" class="article-share-link">Share</a><div class="tags"></div><div class="post-nav"><a href="/2016/08/10/PS2/" class="pre">Android入门教程（6）</a><a href="/2016/08/10/MarkDownFormat/" class="next">发布 Markdown格式的帖子</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://yoursite.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Categories</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/PS2/">Android入门教程（6）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/PS1+Coffee/">Android入门教程（3）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/MarkDownFormat/">发布 Markdown格式的帖子</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/3B/">Android入门教程（8）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/3A/">Android入门教程（7）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/2B_Happy/">Android入门教程（5）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/2AGoG0GO/">Android入门教程（4）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/1B_BuildingLayout/">Android入门教程（2）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/1A_BuildingLayout/">Android入门教程（1）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/hello-world/">Hello World</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Blogroll</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">Hexo.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

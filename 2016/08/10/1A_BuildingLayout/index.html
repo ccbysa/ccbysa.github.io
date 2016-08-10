@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>Android入门教程（1） | Hexo</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/4.2.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Android入门教程（1）</h1><a id="logo" href="/.">Hexo</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> Home</i></a><a href="/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/about/"><i class="fa fa-user"> About</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Android入门教程（1）</h1><div class="post-meta">Aug 10, 2016<script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><h2 id="为后续课程做准备"><a href="#为后续课程做准备" class="headerlink" title="为后续课程做准备"></a>为后续课程做准备</h2><ul>
+<li><p><strong>[准备工作]</strong> 使用“科学上网”下载 Android Studio （DNS 设置为：<em>115.159.19.22</em>）</p>
+</li>
+<li><p><strong>[准备工作]</strong> 下载并安装JDK</p>
+</li>
+</ul>
+<h2 id="本节课学习要点"><a href="#本节课学习要点" class="headerlink" title="本节课学习要点"></a>本节课学习要点</h2><ul>
+<li><p>VIEW 是在屏幕上展示内容的长方形：如：文本框（TextView）、图片（ImageView）、按钮（Button）等</p>
+</li>
+<li><p>多个 <strong>View</strong> 组合在一起，成为UI</p>
+</li>
+<li><p>View 的名字以（骆驼拼写法：单词间无空格，首字母大写） <strong>CamelCase</strong> 书写，如： TextView、ImageView</p>
+</li>
+<li><p>写代码的空间叫 <strong>IDE</strong>，集成开发环境，在安卓开发中，这个工具是 <strong>Android Studio</strong>。</p>
+</li>
+<li><p>需要用语言告诉计算机，该怎么做事情。比如用 XML （可拓展标记语言）建立布局。</p>
+</li>
+<li><p>XML 语言中有开始和结束。以 <strong>&lt;</strong> 开始， 以 <strong>&gt;</strong> 结束，结尾的地方有 <strong>/</strong>。</p>
+</li>
+<li><p><strong>XML</strong> 元素打开后，都<strong>需要关闭</strong>。有些是自闭标签，有些是关闭标签。</p>
+</li>
+<li><p>XML 元素中也可以有子元素。用关闭标签，就知道有几个子元素了。</p>
+</li>
+<li><p><strong>没有子元素，可以使用自闭标签。有子元素，必须使用自闭标签</strong>。</p>
+</li>
+<li><p>XML 的属性决定了 view 的行为或外观的特性。</p>
+</li>
+<li><p>XML 中属性名放在<strong>左边</strong>，右边是属性值。属性值必须放在<strong>“”</strong>中。</p>
+</li>
+<li><p>所有的属性都有默认值，<strong>不是默认值的需要设置</strong>。</p>
+</li>
+<li><p>人们交流的语言可以使用简写 或者 语法、拼写有误。但<strong>计算机语言必须严谨</strong>。</p>
+</li>
+<li><p>在线 XMLV 的地址 <a href="http://labs.udacity.com/android-visualizer/" target="_blank" rel="external">http://labs.udacity.com/android-visualizer/</a></p>
+</li>
+<li><p>view 中度量长宽的单位是 <strong>dp</strong>（<em>密度无关像素 density-independent pixels</em>）<br><strong>使用 dp 可以在不同的设备物理尺寸大小相同，android 会把它映射到不同数量的像素中</strong>。</p>
+</li>
+<li><p>建议所有的可接触目标，如按钮，长 和 宽 <strong>至少 48dps</strong>。</p>
+</li>
+<li><p>我的第一行 XML 代码。修改相关属性值。制造一个错误，并修复它。</p>
+</li>
+<li><p>罗马不是一天建成的。需要不断修改代码，修改错误，完善功能。道路是曲折的，前途是光明的。</p>
+</li>
+<li><p>排查错误的好习惯和方法：1. 查看错误信息；2. 和正常运行的样例代码比较；3. 使用撤销；4. 寻求帮助</p>
+</li>
+<li><p>关于 wrap_content：使用后，会按照内容的宽度和高度自动调整大小。</p>
+</li>
+<li><p>字号 <strong>textSize 大小的单位是 sp</strong>（比例无关像素）。sp 只适用于字体。</p>
+</li>
+<li><p>建议使用 <strong>Material Design</strong>手册<a href="http://www.google.com/design/spec/style/typography.html#" target="_blank" rel="external">推荐</a>的大小，或者 <em>android 提供的标准</em>（小号、中号、大号）。</p>
+</li>
+<li><p>android 提供的色系中没有 blue 哦，可以通过指定 16进制颜色代码来设置。<br>  <a href="https://www.google.com/design/spec/style/color.html" target="_blank" rel="external">https://www.google.com/design/spec/style/color.html</a></p>
+<ul>
+<li>使用 关键词+android, 在 google 搜索，进入 android 开发者网站： <a href="https://developers.google.com/" target="_blank" rel="external">https://developers.google.com/</a> ,可以在文档内搜索。</li>
+</ul>
+</li>
+</ul>
+<h2 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h2><ul>
+<li>自闭标签</li>
+</ul>
+<p><img src="/images/1A_1.jpg" alt=""></p>
+<ul>
+<li>关闭标签</li>
+</ul>
+<p><img src="/images/1A_2.jpg" alt=""></p>
+<ul>
+<li>在 XMLV中编辑XML文件</li>
+</ul>
+<p><img src="/images/1A_3.jpg" alt=""></p>
+<ul>
+<li>制造一个 XML语法错误</li>
+</ul>
+<p><img src="/images/1A_4.jpg" alt=""></p>
+<ul>
+<li>修复 XML语法错误</li>
+</ul>
+<p><img src="/images/1A_5.jpg" alt=""></p>
+<ul>
+<li>在宽度和高度中使用 wrap_content属性值</li>
+</ul>
+<p><img src="/images/1A_6.jpg" alt=""></p>
+<ul>
+<li>使用 textSize设置字号</li>
+</ul>
+<p><img src="/images/1A_7.jpg" alt=""></p>
+<ul>
+<li>在宽度和高度中使用 textAppearanceLarge 属性值</li>
+</ul>
+<p><img src="/images/1A_8.jpg" alt=""></p>
+<ul>
+<li>自己动手，设置 textStyle</li>
+</ul>
+<p><img src="/images/1A_9.jpg" alt=""></p>
+<ul>
+<li>自己动手，设置 background</li>
+</ul>
+<p><img src="/images/1A_10.jpg" alt=""></p>
+<ul>
+<li>自己动手，设置 background 和 textColor</li>
+</ul>
+<p><img src="/images/1A_11.jpg" alt=""></p>
+<h2 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h2><ol>
+<li><a href="https://www.google.com/design/spec/material-design/introduction.html#" target="_blank" rel="external">Material Design介绍</a></li>
+</ol>
+<ul>
+<li><p><a href="https://www.google.com/design/spec/style/color.html" target="_blank" rel="external">Material Design中的颜色</a></p>
+</li>
+<li><p><a href="https://www.google.com/design/spec/style/typography.html" target="_blank" rel="external">Material Design中的字号</a></p>
+</li>
+</ul>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://yoursite.com/2016/08/10/1A_BuildingLayout/" data-id="ciro9yr8v0002s8ujnecu26ma" class="article-share-link">Share</a><div class="tags"></div><div class="post-nav"><a href="/2016/08/10/1B_BuildingLayout/" class="pre">Android入门教程（2）</a><a href="/2016/08/10/hello-world/" class="next">Hello World</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://yoursite.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Categories</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/PS2/">Android入门教程（6）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/PS1+Coffee/">Android入门教程（3）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/MarkDownFormat/">发布 Markdown格式的帖子</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/3B/">Android入门教程（8）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/3A/">Android入门教程（7）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/2B_Happy/">Android入门教程（5）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/2AGoG0GO/">Android入门教程（4）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/1B_BuildingLayout/">Android入门教程（2）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/1A_BuildingLayout/">Android入门教程（1）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/hello-world/">Hello World</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Blogroll</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">Hexo.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>Android入门教程（4） | Hexo</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/4.2.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Android入门教程（4）</h1><a id="logo" href="/.">Hexo</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> Home</i></a><a href="/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/about/"><i class="fa fa-user"> About</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Android入门教程（4）</h1><div class="post-meta">Aug 10, 2016<script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><h2 id="第二节学习要点"><a href="#第二节学习要点" class="headerlink" title="第二节学习要点"></a>第二节学习要点</h2><ol>
+<li>一个<strong>订购咖啡</strong>的应用贯穿本节课程</li>
+<li>给应用增加交互功能，如：<strong>按钮</strong></li>
+<li>学习交互是怎么实现的：学习Java变量和方法</li>
+</ol>
+<h2 id="温习创建APP过程，并为本节做准备"><a href="#温习创建APP过程，并为本节做准备" class="headerlink" title="温习创建APP过程，并为本节做准备"></a>温习创建APP过程，并为本节做准备</h2><ol>
+<li>创建一个名字为 <strong>Just Java</strong>的APP</li>
+<li>创建完成，确保该APP可以在手机上运行显示<strong>Hello world!</strong></li>
+</ol>
+<h2 id="分阶段完成目标"><a href="#分阶段完成目标" class="headerlink" title="分阶段完成目标"></a>分阶段完成目标</h2><p><img src="/images/2A_1.jpg" alt="阶段图1"></p>
+<ol>
+<li><p>显示文本为<strong>QUANTITY</strong>的TextView，文本为<strong>2</strong>的TextView，文本为<strong>ORDER</strong>按钮</p>
+<ul>
+<li>通过<strong>Button的Onclick</strong>属性可以设置点击按钮的动作</li>
+<li>有时候一个活动需要显示多个布局。主活动定义在 MainActivity.java文件中</li>
+<li>8/40 java文件<a href="https://gist.github.com/anonymous/b335094aa30f5866f219" target="_blank" rel="external"><strong><em>链接</em></strong></a>或者<a href="https://github.com/symbolic/Android-resource/blob/master/MainActivity.java" target="_blank" rel="external"><strong><em>备份地址</em></strong></a></li>
+<li>使用例子中的 MainActivity.java，按<strong>ORDER</strong>按钮，数量会变成1。执行过程:<ol>
+<li>点击<strong>ORDER</strong>按钮</li>
+<li>触发 MainActivity中的 <strong>submitOrder</strong>方法。（执行 onClick属性值的方法）<br><img src="/images/2A_3.jpg" alt="学习成果图"></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>增加文本为<strong>PRICE</strong>的TextView，文本为<strong>$10</strong>的TextView</p>
+<ul>
+<li>14/40函数<a href="https://gist.github.com/anonymous/36388d8e8d2608ee1c89" target="_blank" rel="external">链接</a></li>
+<li>尝试<strong>制造一个崩溃</strong>，然后查看错误信息<br><img src="/images/2A_4.jpg" alt="学习成果图"></li>
+</ul>
+</li>
+<li><p>增加<strong>数量增加</strong>和<strong>数量减少</strong>的按钮（<strong>*竖直方式</strong>显示），点击按钮，数量会变化</p>
+<ul>
+<li>增加2个按钮(<strong>增加</strong>按钮和<strong>减少</strong>按钮)</li>
+<li>增加按钮动作</li>
+<li><strong><em>坑：</em></strong> 执行按钮动作的方法需要设置为<strong>public</strong></li>
+<li>使用<strong>伪代码</strong>分析问题</li>
+<li>使用全局变量，可以让<strong>‘+’或者’-‘</strong>操作后，数量连续增减<br><img src="/images/2A_5.jpg" alt="学习成果图"></li>
+</ul>
+</li>
+</ol>
+<p><img src="/images/2A_2.jpg" alt="阶段图2"></p>
+<ol>
+<li><p>以<strong>水平方式</strong>显示<strong>数量增加</strong>和<strong>数量减少</strong>的按钮及<strong>数量</strong> TextView</p>
+<ul>
+<li>先自行查找资料，试图解决问题</li>
+</ul>
+</li>
+<li><p>改变单价显示样式，并把<strong>ORDER</strong>按钮移动到屏幕下方居中位置</p>
+<ul>
+<li>先自行查找资料，试图解决问题</li>
+</ul>
+</li>
+</ol>
+<h2 id="Java语言学习"><a href="#Java语言学习" class="headerlink" title="Java语言学习"></a>Java语言学习</h2><ol>
+<li>Java 语法，有一对大括号。</li>
+<li>声明方法，实现方法后，就可以使用了</li>
+<li>尝试修改 coffee的数量</li>
+<li>使用<strong>表达式</strong>代替表达式的数量</li>
+<li>遇到Java代码错误，看错误信息；也可以执行<strong>撤销</strong>操作，查找原因</li>
+<li>声明变量： <strong>类型 变量名 = 初始值;</strong></li>
+<li>变量命名规则：首字母小写、驼峰式；可读性强；不要太长</li>
+<li>编译时错误 和 运行时错误</li>
+<li>局部变量和全局变量的作用域</li>
+<li>练习使用debugger，调试程序</li>
+</ol>
+<h2 id="学习照"><a href="#学习照" class="headerlink" title="学习照"></a>学习照</h2><p><img src="/images/2A_6.jpg" alt="学习照"></p>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://yoursite.com/2016/08/10/2AGoG0GO/" data-id="ciro9yr8y0003s8ujrj653quk" class="article-share-link">Share</a><div class="tags"></div><div class="post-nav"><a href="/2016/08/10/2B_Happy/" class="pre">Android入门教程（5）</a><a href="/2016/08/10/1B_BuildingLayout/" class="next">Android入门教程（2）</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://yoursite.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Categories</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/PS2/">Android入门教程（6）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/PS1+Coffee/">Android入门教程（3）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/MarkDownFormat/">发布 Markdown格式的帖子</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/3B/">Android入门教程（8）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/3A/">Android入门教程（7）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/2B_Happy/">Android入门教程（5）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/2AGoG0GO/">Android入门教程（4）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/1B_BuildingLayout/">Android入门教程（2）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/1A_BuildingLayout/">Android入门教程（1）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/hello-world/">Hello World</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Blogroll</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">Hexo.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

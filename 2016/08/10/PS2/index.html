@@ -1,0 +1,136 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>Android入门教程（6） | Hexo</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/4.2.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Android入门教程（6）</h1><a id="logo" href="/.">Hexo</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> Home</i></a><a href="/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/about/"><i class="fa fa-user"> About</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Android入门教程（6）</h1><div class="post-meta">Aug 10, 2016<script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
+<li>创建名字为 <strong>Practice Set 2</strong>的 APP</li>
+<li>该 Project启动后，打开 activity_main.xml，打开侧边栏的 <strong>Preview</strong>，手机上能显示<strong>Hello World!</strong>，表示准备工作完成</li>
+</ul>
+<h2 id="Part-1——变量的声明和初始化"><a href="#Part-1——变量的声明和初始化" class="headerlink" title="Part 1——变量的声明和初始化"></a>Part 1——变量的声明和初始化</h2><ul>
+<li><p>变量的声明： </p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> total;</div></pre></td></tr></table></figure>
+</li>
+<li><p>变量的初始化： </p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">total = <span class="number">10</span>;</div></pre></td></tr></table></figure>
+</li>
+<li><p>变量的声明和初始化同时进行： </p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> total = <span class="number">10</span>;</div></pre></td></tr></table></figure>
+</li>
+<li><p>局部变量必须先初始化才可以使用</p>
+</li>
+<li>Java 保留字不能用作变量名，如：<strong>int</strong></li>
+<li>变量名使用驼峰格式：首字母小写，单词头大写，增强可读性</li>
+<li>变量名中不能包含特殊字符，如：<code>&#39;</code>、<code>&#39;</code>、<code>&quot;</code>、<code>&quot;</code>、<code>空格</code>等</li>
+<li>String 不是基本数据类型，它是一个<strong>类</strong></li>
+</ul>
+<h2 id="Part-2——使用变量"><a href="#Part-2——使用变量" class="headerlink" title="Part 2——使用变量"></a>Part 2——使用变量</h2><ul>
+<li>手动模拟，像电脑一样，一行一行分析代码，可以帮助追踪、观察变量</li>
+<li>查看程序的完成目前时，考虑自己的解决步骤，想想自己怎么解决问题</li>
+<li>可以使用<strong>( )</strong>来改变运算的优先级</li>
+<li>使用 <code>+</code> 可以连接字符串</li>
+<li><strong><em>小贴士</em></strong>：Email 地址是区分大小写的哦</li>
+</ul>
+<h2 id="Part-3——变量的作用域"><a href="#Part-3——变量的作用域" class="headerlink" title="Part 3——变量的作用域"></a>Part 3——变量的作用域</h2><ul>
+<li>作用域是用于区分局部变量和全局变量</li>
+<li>局部变量只在定义它的代码块有效，一般是函数</li>
+<li>全局变量在程序的全部都有效</li>
+<li>局部变量在函数执行完后，会自动消亡，不能再使用了</li>
+<li>局部变量不能保存两次投票之间的数据</li>
+<li>局部变量必须初始化后才可以使用</li>
+<li>全局变量不要滥用，能用局部变量就用局部变量</li>
+<li>全局变量创建后，有默认值。String 的默认值是 <strong>“”</strong>，也就是空字符串</li>
+</ul>
+<h2 id="Part-4——篮球计分器"><a href="#Part-4——篮球计分器" class="headerlink" title="Part 4——篮球计分器"></a>Part 4——篮球计分器</h2><ul>
+<li><p>APP 介绍</p>
+<ol>
+<li>名字 Court Counter</li>
+<li>3分线外得分，+3</li>
+<li>3分线内得分，+2</li>
+<li>罚球得分，+1</li>
+<li>比分动态显示</li>
+<li>按 <code>RESET</code> 按钮，比分清零</li>
+</ol>
+</li>
+<li><p>分析问题</p>
+<ol>
+<li>用那些 views</li>
+<li>如何布置 views，也就是选择哪种类型的 ViewGroups</li>
+<li>view 风格（美化）</li>
+<li><strong><em>提示：</em></strong>可以使用 <strong>gravity</strong> 和 <strong>layout_gravity</strong> 来居中和对齐</li>
+</ol>
+</li>
+<li><p>该项目完成后的效果图<br>  <img src="/images/PS2_1.jpg" alt="效果图"></p>
+</li>
+</ul>
+<h2 id="项目实践"><a href="#项目实践" class="headerlink" title="项目实践"></a>项目实践</h2><h3 id="根据目标效果图，在不看-PS2-part2视频的情况下，自行查找资料，编码，在手机上运行情况如下图："><a href="#根据目标效果图，在不看-PS2-part2视频的情况下，自行查找资料，编码，在手机上运行情况如下图：" class="headerlink" title="根据目标效果图，在不看 PS2-part2视频的情况下，自行查找资料，编码，在手机上运行情况如下图："></a>根据目标效果图，在不看 <strong>PS2-part2</strong>视频的情况下，自行查找资料，编码，在手机上运行情况如下图：</h3><p><img src="/images/PS2_2.jpg" alt="图2"></p>
+<pre><code>实现的功能
+    1. 所有views 都放置到屏幕上
+    2. 按下按钮，能正常计分
+    3. 得分可以动态显示
+    4. 按下 RESET 按钮，分数可以清零
+未实现的功能
+    1. 屏幕中间没有分割线
+    2. RESET 按钮没有位于屏幕底部
+</code></pre><h3 id="跟着视频走，特别留意自己未实现的功能"><a href="#跟着视频走，特别留意自己未实现的功能" class="headerlink" title="跟着视频走，特别留意自己未实现的功能"></a>跟着视频走，特别留意自己未实现的功能</h3><ul>
+<li>循序渐进，逐步增加功能<ol>
+<li>只显示 Team A 相关的 views，按按钮显示对应得分</li>
+<li>使用全局变量 <strong>scoreTeamA</strong>保存 Team A 的分数(初始值为 <strong>0</strong>)</li>
+<li>每次点击<code>+3 POINTS</code>按钮，分数按相应值增加3<ul>
+<li>先增加分数</li>
+<li>显示分数</li>
+<li><strong><em>注意：</em></strong>交换次序后，显示的是上次的得分哦</li>
+<li>代码如下：<br>public void teamAGetThree(View view) {<br>teamAScore += 3;<br>displayTeamAScore(teamAScore);<br>}</li>
+</ul>
+</li>
+<li>按照上面的方法，增加代码，使按另外2个按钮，分数也可以增加，并动态显示<br><img src="/images/PS2_3.jpg" alt="图3"></li>
+<li>修改xml代码，增加 Team B相应的列（把 Team A相关的 views 当作一个大 view; Team B相关的 views 当作另一个大 view）</li>
+<li>使用 LinearLayout来实现，并用layout_weight来实现2个 ViewGroup一样大<ul>
+<li><strong>注意</strong>: 此处，和我的此前的想法有别，我是把每一行当作一个 LinearLayout</li>
+<li>用视频中的思路重写代码</li>
+</ul>
+</li>
+<li>简单复制 Team A的相关xml代码，存在一个问题：按Team B 的按钮，分数增加到了Team A上</li>
+<li>解决7中存在的问题<ul>
+<li>修改 Team B的onClick方法</li>
+<li>增加一个全局变量 teamBScore</li>
+<li>增加3个函数更新并显示得分情况<br><img src="/images/PS2_4.jpg" alt="图4"></li>
+</ul>
+</li>
+<li>增加 RESET 按钮（点击按钮，得分清零）<ul>
+<li>把上面的 VireGroups当作一个大视图</li>
+<li>利用 RelativeLayout 把大视图和 RESET 按钮组合在一起</li>
+</ul>
+</li>
+<li>比较不同代码的实现方式，看哪种更简洁高效</li>
+<li>修改 styles.xml 文件，让界面看起来更漂亮<ul>
+<li>样式文件负责引用的基本格式</li>
+<li>修改styles.xml后，可以对所有的元素生效，而不需要单独设置每个的 style</li>
+<li>需要 API 21以上有效，否则显示<strong>灰色</strong></li>
+</ul>
+</li>
+<li>增加分割线<br><img src="/images/PS2_5.jpg" alt="图5"></li>
+</ol>
+</li>
+</ul>
+<h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><ul>
+<li>出现编译时错误，编译器不允许运行代码</li>
+<li>程序逻辑不正确，会导致运行结果出错</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>LinearLayout 中的 gravity 属性是调整view中 text的位置（靠右、居中、水平居中等）</li>
+<li>padding 属性是在 view 里面加 padding</li>
+<li>margin 属性是在 view 的边框外加间隙</li>
+<li><p>constant 常量，值不变的量</p>
+</li>
+<li><p>刚看完PS1的 part1后，就立即着手开发APP了，但是自己的思路和视频的思路还是不一样的。</p>
+<h3 id="相同的地方"><a href="#相同的地方" class="headerlink" title="相同的地方"></a>相同的地方</h3><p>  最大的 ViewGroups 都使用了 RelativeLayout</p>
+</li>
+</ul>
+<h3 id="不同的地方"><a href="#不同的地方" class="headerlink" title="不同的地方"></a>不同的地方</h3><pre><code>我把每一行当作一个 LinearLayout来处理
+视频讲师把 每一个 Team 作为一个 LinearLayout来处理 
+</code></pre><ul>
+<li>view这种视图是以前未见过的，没有了解，在视频中，部分代码经常被遮挡，无法抄写，需要自行搜索解决</li>
+<li>虽然两者都可以实现该 APP 的功能，但从程序模块化、以及后期扩展来说，视频导师的分析办法，便于扩展，结构清晰，值得学习！</li>
+<li>总体来讲，虽然，该 APP 中用到的 View 层次比较多，但只要搞清楚父子关系，代码组织起来就很轻松了。</li>
+<li><p>每节课结尾对成功 APP 的介绍非常有用，让准备开发 Android 应用的人知道：<strong>从用户的需求出发，开发对社会有用的应用</strong></p>
+</li>
+<li><p>一杯咖啡，送给亲爱的 Lyla 及所有为 <strong>Study Jams</strong> 活动付出汗水的人们!<br><img src="/images/PS2_6.jpg" alt="cheers"></p>
+</li>
+</ul>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://yoursite.com/2016/08/10/PS2/" data-id="ciro9yr9h0009s8ujwwophrjj" class="article-share-link">Share</a><div class="tags"></div><div class="post-nav"><a href="/2016/08/10/PS1+Coffee/" class="next">Android入门教程（3）</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://yoursite.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Categories</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/PS2/">Android入门教程（6）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/PS1+Coffee/">Android入门教程（3）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/MarkDownFormat/">发布 Markdown格式的帖子</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/3B/">Android入门教程（8）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/3A/">Android入门教程（7）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/2B_Happy/">Android入门教程（5）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/2AGoG0GO/">Android入门教程（4）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/1B_BuildingLayout/">Android入门教程（2）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/1A_BuildingLayout/">Android入门教程（1）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/hello-world/">Hello World</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Blogroll</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">Hexo.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

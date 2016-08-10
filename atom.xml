@@ -1,0 +1,969 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2016-06-03T07:55:30.828Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android入门教程（6）</title>
+    <link href="http://yoursite.com/2016/08/10/PS2/"/>
+    <id>http://yoursite.com/2016/08/10/PS2/</id>
+    <published>2016-08-10T02:25:04.102Z</published>
+    <updated>2016-06-03T07:55:30.828Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
+<li>创建名字为 <strong>Practice Set 2</strong>的 APP</li>
+<li>该 Project启动后，打开 activity_main.xml，打开侧边栏的 <strong>Preview</strong>，手机上能显示<strong>Hello World!</strong>，表示准备工作完成</li>
+</ul>
+<h2 id="Part-1——变量的声明和初始化"><a href="#Part-1——变量的声明和初始化" class="headerlink" title="Part 1——变量的声明和初始化"></a>Part 1——变量的声明和初始化</h2><ul>
+<li><p>变量的声明： </p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> total;</div></pre></td></tr></table></figure>
+</li>
+<li><p>变量的初始化： </p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">total = <span class="number">10</span>;</div></pre></td></tr></table></figure>
+</li>
+<li><p>变量的声明和初始化同时进行： </p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> total = <span class="number">10</span>;</div></pre></td></tr></table></figure>
+</li>
+<li><p>局部变量必须先初始化才可以使用</p>
+</li>
+<li>Java 保留字不能用作变量名，如：<strong>int</strong></li>
+<li>变量名使用驼峰格式：首字母小写，单词头大写，增强可读性</li>
+<li>变量名中不能包含特殊字符，如：<code>&#39;</code>、<code>&#39;</code>、<code>&quot;</code>、<code>&quot;</code>、<code>空格</code>等</li>
+<li>String 不是基本数据类型，它是一个<strong>类</strong></li>
+</ul>
+<h2 id="Part-2——使用变量"><a href="#Part-2——使用变量" class="headerlink" title="Part 2——使用变量"></a>Part 2——使用变量</h2><ul>
+<li>手动模拟，像电脑一样，一行一行分析代码，可以帮助追踪、观察变量</li>
+<li>查看程序的完成目前时，考虑自己的解决步骤，想想自己怎么解决问题</li>
+<li>可以使用<strong>( )</strong>来改变运算的优先级</li>
+<li>使用 <code>+</code> 可以连接字符串</li>
+<li><strong><em>小贴士</em></strong>：Email 地址是区分大小写的哦</li>
+</ul>
+<h2 id="Part-3——变量的作用域"><a href="#Part-3——变量的作用域" class="headerlink" title="Part 3——变量的作用域"></a>Part 3——变量的作用域</h2><ul>
+<li>作用域是用于区分局部变量和全局变量</li>
+<li>局部变量只在定义它的代码块有效，一般是函数</li>
+<li>全局变量在程序的全部都有效</li>
+<li>局部变量在函数执行完后，会自动消亡，不能再使用了</li>
+<li>局部变量不能保存两次投票之间的数据</li>
+<li>局部变量必须初始化后才可以使用</li>
+<li>全局变量不要滥用，能用局部变量就用局部变量</li>
+<li>全局变量创建后，有默认值。String 的默认值是 <strong>“”</strong>，也就是空字符串</li>
+</ul>
+<h2 id="Part-4——篮球计分器"><a href="#Part-4——篮球计分器" class="headerlink" title="Part 4——篮球计分器"></a>Part 4——篮球计分器</h2><ul>
+<li><p>APP 介绍</p>
+<ol>
+<li>名字 Court Counter</li>
+<li>3分线外得分，+3</li>
+<li>3分线内得分，+2</li>
+<li>罚球得分，+1</li>
+<li>比分动态显示</li>
+<li>按 <code>RESET</code> 按钮，比分清零</li>
+</ol>
+</li>
+<li><p>分析问题</p>
+<ol>
+<li>用那些 views</li>
+<li>如何布置 views，也就是选择哪种类型的 ViewGroups</li>
+<li>view 风格（美化）</li>
+<li><strong><em>提示：</em></strong>可以使用 <strong>gravity</strong> 和 <strong>layout_gravity</strong> 来居中和对齐</li>
+</ol>
+</li>
+<li><p>该项目完成后的效果图<br>  <img src="/images/PS2_1.jpg" alt="效果图"></p>
+</li>
+</ul>
+<h2 id="项目实践"><a href="#项目实践" class="headerlink" title="项目实践"></a>项目实践</h2><h3 id="根据目标效果图，在不看-PS2-part2视频的情况下，自行查找资料，编码，在手机上运行情况如下图："><a href="#根据目标效果图，在不看-PS2-part2视频的情况下，自行查找资料，编码，在手机上运行情况如下图：" class="headerlink" title="根据目标效果图，在不看 PS2-part2视频的情况下，自行查找资料，编码，在手机上运行情况如下图："></a>根据目标效果图，在不看 <strong>PS2-part2</strong>视频的情况下，自行查找资料，编码，在手机上运行情况如下图：</h3><p><img src="/images/PS2_2.jpg" alt="图2"></p>
+<pre><code>实现的功能
+    1. 所有views 都放置到屏幕上
+    2. 按下按钮，能正常计分
+    3. 得分可以动态显示
+    4. 按下 RESET 按钮，分数可以清零
+未实现的功能
+    1. 屏幕中间没有分割线
+    2. RESET 按钮没有位于屏幕底部
+</code></pre><h3 id="跟着视频走，特别留意自己未实现的功能"><a href="#跟着视频走，特别留意自己未实现的功能" class="headerlink" title="跟着视频走，特别留意自己未实现的功能"></a>跟着视频走，特别留意自己未实现的功能</h3><ul>
+<li>循序渐进，逐步增加功能<ol>
+<li>只显示 Team A 相关的 views，按按钮显示对应得分</li>
+<li>使用全局变量 <strong>scoreTeamA</strong>保存 Team A 的分数(初始值为 <strong>0</strong>)</li>
+<li>每次点击<code>+3 POINTS</code>按钮，分数按相应值增加3<ul>
+<li>先增加分数</li>
+<li>显示分数</li>
+<li><strong><em>注意：</em></strong>交换次序后，显示的是上次的得分哦</li>
+<li>代码如下：<br>public void teamAGetThree(View view) {<br>teamAScore += 3;<br>displayTeamAScore(teamAScore);<br>}</li>
+</ul>
+</li>
+<li>按照上面的方法，增加代码，使按另外2个按钮，分数也可以增加，并动态显示<br><img src="/images/PS2_3.jpg" alt="图3"></li>
+<li>修改xml代码，增加 Team B相应的列（把 Team A相关的 views 当作一个大 view; Team B相关的 views 当作另一个大 view）</li>
+<li>使用 LinearLayout来实现，并用layout_weight来实现2个 ViewGroup一样大<ul>
+<li><strong>注意</strong>: 此处，和我的此前的想法有别，我是把每一行当作一个 LinearLayout</li>
+<li>用视频中的思路重写代码</li>
+</ul>
+</li>
+<li>简单复制 Team A的相关xml代码，存在一个问题：按Team B 的按钮，分数增加到了Team A上</li>
+<li>解决7中存在的问题<ul>
+<li>修改 Team B的onClick方法</li>
+<li>增加一个全局变量 teamBScore</li>
+<li>增加3个函数更新并显示得分情况<br><img src="/images/PS2_4.jpg" alt="图4"></li>
+</ul>
+</li>
+<li>增加 RESET 按钮（点击按钮，得分清零）<ul>
+<li>把上面的 VireGroups当作一个大视图</li>
+<li>利用 RelativeLayout 把大视图和 RESET 按钮组合在一起</li>
+</ul>
+</li>
+<li>比较不同代码的实现方式，看哪种更简洁高效</li>
+<li>修改 styles.xml 文件，让界面看起来更漂亮<ul>
+<li>样式文件负责引用的基本格式</li>
+<li>修改styles.xml后，可以对所有的元素生效，而不需要单独设置每个的 style</li>
+<li>需要 API 21以上有效，否则显示<strong>灰色</strong></li>
+</ul>
+</li>
+<li>增加分割线<br><img src="/images/PS2_5.jpg" alt="图5"></li>
+</ol>
+</li>
+</ul>
+<h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><ul>
+<li>出现编译时错误，编译器不允许运行代码</li>
+<li>程序逻辑不正确，会导致运行结果出错</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>LinearLayout 中的 gravity 属性是调整view中 text的位置（靠右、居中、水平居中等）</li>
+<li>padding 属性是在 view 里面加 padding</li>
+<li>margin 属性是在 view 的边框外加间隙</li>
+<li><p>constant 常量，值不变的量</p>
+</li>
+<li><p>刚看完PS1的 part1后，就立即着手开发APP了，但是自己的思路和视频的思路还是不一样的。</p>
+<h3 id="相同的地方"><a href="#相同的地方" class="headerlink" title="相同的地方"></a>相同的地方</h3><p>  最大的 ViewGroups 都使用了 RelativeLayout</p>
+</li>
+</ul>
+<h3 id="不同的地方"><a href="#不同的地方" class="headerlink" title="不同的地方"></a>不同的地方</h3><pre><code>我把每一行当作一个 LinearLayout来处理
+视频讲师把 每一个 Team 作为一个 LinearLayout来处理 
+</code></pre><ul>
+<li>view这种视图是以前未见过的，没有了解，在视频中，部分代码经常被遮挡，无法抄写，需要自行搜索解决</li>
+<li>虽然两者都可以实现该 APP 的功能，但从程序模块化、以及后期扩展来说，视频导师的分析办法，便于扩展，结构清晰，值得学习！</li>
+<li>总体来讲，虽然，该 APP 中用到的 View 层次比较多，但只要搞清楚父子关系，代码组织起来就很轻松了。</li>
+<li><p>每节课结尾对成功 APP 的介绍非常有用，让准备开发 Android 应用的人知道：<strong>从用户的需求出发，开发对社会有用的应用</strong></p>
+</li>
+<li><p>一杯咖啡，送给亲爱的 Lyla 及所有为 <strong>Study Jams</strong> 活动付出汗水的人们!<br><img src="/images/PS2_6.jpg" alt="cheers"></p>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;准备工作&quot;&gt;&lt;a href=&quot;#准备工作&quot; class=&quot;headerlink&quot; title=&quot;准备工作&quot;&gt;&lt;/a&gt;准备工作&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;创建名字为 &lt;strong&gt;Practice Set 2&lt;/strong&gt;的 APP&lt;/li&gt;
+&lt;li&gt;该 Pr
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Android入门教程（3）</title>
+    <link href="http://yoursite.com/2016/08/10/PS1+Coffee/"/>
+    <id>http://yoursite.com/2016/08/10/PS1+Coffee/</id>
+    <published>2016-08-10T02:25:04.091Z</published>
+    <updated>2016-06-03T07:38:52.421Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Android-开发环境搭建"><a href="#Android-开发环境搭建" class="headerlink" title="Android 开发环境搭建"></a>Android 开发环境搭建</h2><ol>
+<li>下载并安装 JDK</li>
+<li>下载并安装 Android Studio</li>
+</ol>
+<h2 id="安装第一个-App"><a href="#安装第一个-App" class="headerlink" title="安装第一个 App"></a>安装第一个 App</h2><ol>
+<li><p>在‘设置’——‘关于手机’——‘版本号’，连续点击7次</p>
+</li>
+<li><p>返回，找到‘开发者选项’并打开</p>
+</li>
+<li><p>开启‘USB调试’</p>
+</li>
+<li><p>把手机连上电脑。（Windows系统）需要下载 Android 驱动。google search ‘oem Android’</p>
+</li>
+<li><p>点击 <strong> 绿色的三角形 </strong>按钮，选择你的手机</p>
+</li>
+<li><p>如果没有意外，显示如下<br><img src="/images/PS1_1.jpg" alt="第一个App"></p>
+</li>
+<li><p><strong>OK</strong>之后，手机屏幕就显示</p>
+</li>
+</ol>
+<h2 id="制作生日贺卡"><a href="#制作生日贺卡" class="headerlink" title="制作生日贺卡"></a>制作生日贺卡</h2><ol>
+<li>选择需要的 view （使用什么布局类型？LinearLayout or RelativeLayout；有哪些 view？）</li>
+</ol>
+<ul>
+<li>如何布置 view</li>
+<li>view 的风格</li>
+<li>效果图如下：<br><img src="/images/PS1_2.jpg" alt="生日贺卡"><br><strong>注意：有很多 padding 需要删除</strong></li>
+<li>在手机上运行的效果图如下<br><img src="/images/PS1_3.jpg" alt="在手机运行效果"></li>
+<li>添加边距 使用 margin参数<br><img src="/images/PS1_4.jpg" alt="增加边距后"></li>
+<li>最后在手机上运行效果<br><img src="/images/PS1_5.jpg" alt="最后效果图"></li>
+</ul>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ol>
+<li>图片资源放在 <strong>../res/drawable/</strong> 下</li>
+</ol>
+<ul>
+<li>android:src 属性值不需要加后缀</li>
+<li>依据view出现的顺序依次放置,如果次序有误,可能导致覆盖</li>
+<li>一个好的APP应该创造更多价值，而不是炒作</li>
+</ul>
+<h2 id="出现过的问题"><a href="#出现过的问题" class="headerlink" title="出现过的问题"></a>出现过的问题</h2><ol>
+<li><p>Preview 时报错：Android Studio: Rendering Problems Exception raised during rendering: com.android.ide.common.rendering.api.LayoutlibCallback</p>
+<p><strong>解决办法：</strong> <a href="http://stackoverflow.com/questions/35914565/android-studio-rendering-problems-exception-raised-during-rendering-com-androi" target="_blank" rel="external">链接在此</a>把 preview中选择 <strong> API 23 </strong></p>
+</li>
+</ol>
+<ul>
+<li>ImageView属性默认有很多（<strong>就是 RelativeLayout 的属性值</strong>） padding，需要删掉</li>
+</ul>
+<h2 id="view-属性巩固"><a href="#view-属性巩固" class="headerlink" title="view 属性巩固"></a>view 属性巩固</h2><ul>
+<li>textStyle 字体风格:粗体 斜体</li>
+<li>testAlignment 左对齐 右对齐 居中</li>
+<li><p>fontFamily 设置字体</p>
+</li>
+<li><p>src 图片</p>
+</li>
+<li>scaleType 图片尺寸<ul>
+<li>certer居中显示,不改变大小</li>
+<li>centerCrop 居中拉伸</li>
+</ul>
+</li>
+<li>layout_width 图片框宽度</li>
+<li>layout_height 图片框高度</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Android-开发环境搭建&quot;&gt;&lt;a href=&quot;#Android-开发环境搭建&quot; class=&quot;headerlink&quot; title=&quot;Android 开发环境搭建&quot;&gt;&lt;/a&gt;Android 开发环境搭建&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;下载并安装 JDK&lt;/li&gt;
+&lt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>发布 Markdown格式的帖子</title>
+    <link href="http://yoursite.com/2016/08/10/MarkDownFormat/"/>
+    <id>http://yoursite.com/2016/08/10/MarkDownFormat/</id>
+    <published>2016-08-10T02:25:04.075Z</published>
+    <updated>2016-04-06T07:10:09.846Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="本论坛发帖工具箱提供的工具"><a href="#本论坛发帖工具箱提供的工具" class="headerlink" title="本论坛发帖工具箱提供的工具"></a>本论坛发帖工具箱提供的工具</h2><ul>
+<li>鉴于论坛中有人习惯用 Markdown 发布笔记，苦于没有找到改功能。故作一个简单教程。</li>
+<li>论坛的发帖工具箱很强大，不止支持 Markdown，还有其他功能</li>
+<li>发帖工具箱支持的工具有：<ul>
+<li>Markdown代码</li>
+<li>插入代码高亮</li>
+<li>围棋SGF 棋谱</li>
+<li>围棋死活题</li>
+<li>数学物理化学公式</li>
+<li>Graphviz 画图(dot)</li>
+<li>Graphviz 画图(neato)</li>
+</ul>
+</li>
+</ul>
+<h2 id="以插入-Markdown代码为例说明"><a href="#以插入-Markdown代码为例说明" class="headerlink" title="以插入 Markdown代码为例说明"></a>以插入 Markdown代码为例说明</h2><ol>
+<li>点击工具按钮，如下图<br><img src="/images/md_1.jpg" alt="图1"></li>
+</ol>
+<ul>
+<li>弹出<strong>论坛发帖工具箱</strong><br><img src="/images/md_2.jpg" alt="图2"></li>
+<li>在<strong><em>请选择发帖类型</em></strong>下拉菜单中选择 <strong>Mardkown</strong>代码<br><img src="/images/md_3.jpg" alt="图3"></li>
+<li>把你的 Markdown格式笔记，粘贴进来<br><img src="/images/md_4.jpg" alt="图4"></li>
+<li>点击右下角的<strong>提交</strong>按钮<br><img src="/images/md_5.jpg" alt="图5"></li>
+<li>在帖子编辑去会出现<strong>[tex=md]</strong>，说明你的格式是Mardkown<br><img src="/images/md_6.jpg" alt="图6"></li>
+<li>如果需要请上传并插入图片<ul>
+<li><strong>注意</strong>：如果你的 Mardkown笔记中有<strong><em>![pic]</em></strong> <strong><em>(image/a.jpb)</em></strong>之类的代码，可以在此处插入相应图片，并删除这行代码。<br><img src="/images/md_7.jpg" alt="图片7"></li>
+</ul>
+</li>
+<li>大功告成！点击<strong>发表帖子</strong><br><img src="/images/md_8.jpg" alt="图片8"></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;本论坛发帖工具箱提供的工具&quot;&gt;&lt;a href=&quot;#本论坛发帖工具箱提供的工具&quot; class=&quot;headerlink&quot; title=&quot;本论坛发帖工具箱提供的工具&quot;&gt;&lt;/a&gt;本论坛发帖工具箱提供的工具&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;鉴于论坛中有人习惯用 Markdown 
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Android入门教程（8）</title>
+    <link href="http://yoursite.com/2016/08/10/3B/"/>
+    <id>http://yoursite.com/2016/08/10/3B/</id>
+    <published>2016-08-10T02:25:04.041Z</published>
+    <updated>2016-06-03T07:56:10.542Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="red-lines"><a href="#red-lines" class="headerlink" title="red lines"></a>red lines</h2><ul>
+<li>red lines(用红色标出的交互设计标识)</li>
+<li>red lines 是对app可视化界面的详细说明</li>
+<li>red lines 可能包括颜色、view的大小、间距、字体大小、字体颜色等</li>
+</ul>
+<h2 id="boolean-数据类型"><a href="#boolean-数据类型" class="headerlink" title="boolean 数据类型"></a>boolean 数据类型</h2><ul>
+<li>boolean 是java的一个基本数据类型</li>
+<li>只有2个状态，true 或者 false</li>
+<li>占1 bit存储空间</li>
+<li>声明： <strong><em>*boolean hasWhippedCream = true;</em></strong></li>
+<li>变量的命名一般以<strong><em>is</em></strong> 或者 <strong><em>has</em></strong>开头</li>
+</ul>
+<h2 id="复选框-checkbox"><a href="#复选框-checkbox" class="headerlink" title="复选框 checkbox"></a>复选框 checkbox</h2><ul>
+<li>解决问题办法：遇到不懂的，用 <strong><em>关键词+ android</em></strong> 问 google</li>
+<li>怎么知道复选框是否被勾上了呢？<ul>
+<li>创建 checkbox后，会自动生成一个java对象</li>
+<li>这个Java对象中有一个boolean类型的变量</li>
+<li>变量的状态(true 或者 false)表示 checkbox 是否被选定</li>
+<li>true表示被选中，false 表示未选中</li>
+</ul>
+</li>
+</ul>
+<h2 id="文本框-EditText"><a href="#文本框-EditText" class="headerlink" title="文本框 EditText"></a>文本框 EditText</h2><ul>
+<li>android:hint属性：设置当EditText内容为空时显示的文本</li>
+<li>android:textColorHint属性设置你想要的颜色</li>
+<li>android:enabled=”false”可以实现不可编辑，可以获得焦点。这时候我们看到EditText和一个TextView差不多</li>
+<li>实现类似html中Textarea的文本域。在Android中没有专门的文本域组件，但是可以通过设置EditText的高来实现同样的文本域功能</li>
+<li>密码文本框。密码输入也是Android应用常用的功能，通过配置EditText的android:password=”true”就可以实现这一密码输入功能</li>
+<li>android:phoneNumber=”true”就可以把EditText变成只接受电话号码输入的文本框，连软键盘都已经变成拨号专用软键盘了</li>
+<li></li>
+</ul>
+<h2 id="如何让屏幕上下滚动？"><a href="#如何让屏幕上下滚动？" class="headerlink" title="如何让屏幕上下滚动？"></a>如何让屏幕上下滚动？</h2><ul>
+<li>使用ScrollView</li>
+<li>以前的<strong>fill_parent</strong>就是现在的<strong>match_parent</strong></li>
+<li>把当前的试图放入ScrollView中，<strong>ScrollView</strong>只可以包含一个项目</li>
+<li>使用ScrollView可以让试图在不同的设备上运行</li>
+</ul>
+<h2 id="流程控制语句"><a href="#流程控制语句" class="headerlink" title="流程控制语句"></a>流程控制语句</h2><ul>
+<li>通常代码是一行一行从上往下执行的，通过流程控制语句，可以改变程序的执行顺序</li>
+<li>if/else 代码块<ul>
+<li>if语句执行完毕后，会自动跳过else语句块</li>
+<li>当判断语句的逻辑运算结果为true时执行{}内的语句</li>
+<li>逻辑语句可以是boolean，也可以是&gt;、&lt;、 ==等表达式</li>
+<li>在测试过程中，要把所有的组合都考虑到</li>
+</ul>
+</li>
+</ul>
+<h2 id="Just-Java中实现的功能"><a href="#Just-Java中实现的功能" class="headerlink" title="Just Java中实现的功能"></a>Just Java中实现的功能</h2><ul>
+<li>按<strong>增加</strong>和<strong>减少</strong>按钮，价格动态刷新</li>
+<li>按ORDER按钮后，显示订单详情</li>
+<li>按RESEt按钮，数量设置为1，不添加任何东西，并显示价格</li>
+<li>数量在【1， 100】范围内，超过范围数量不变</li>
+<li></li>
+</ul>
+<h2 id="toast的用法"><a href="#toast的用法" class="headerlink" title="toast的用法"></a>toast的用法</h2><ul>
+<li><p>第一种方法的Java代码： </p>
+<ul>
+<li>makeText(Context context, int resId, int duration)<br>参数：context是toast显示在哪个上下文，通常是当前Activity；resId指显示内容引用Resouce那条数据，就是从R类中去指定显示的消息内容；duration指定显示时间，Toast默认有LENGTH_SHORT和LENGTH_LONG两常量，分别表示短时间显示和长时间显示。</li>
+</ul>
+</li>
+<li><p>第二种方法的Java代码： </p>
+<ul>
+<li>makeText(Context context, CharSequence text, int duration)<br>参数context和duration与第一个方法相同，参数text可以自己写消息内容。</li>
+</ul>
+</li>
+<li><p>用上面任意方法创建Toast对象之后调用方法show()即可显示。</p>
+<pre><code>Toast toast = Toast.makeText(MainActivity.this, &quot;This is a toast!&quot;, Toast.LENGTH_SHORT); 
+
+toast.show();
+</code></pre></li>
+</ul>
+<h2 id="intent方法"><a href="#intent方法" class="headerlink" title="intent方法"></a>intent方法</h2><ul>
+<li>intent是一个可以用来要求其它应用组件完成某些特定动作的消息</li>
+<li>可以查看地图、打开相机、发送邮件等</li>
+<li>最酷的功能是，你不需要知道哪些应用来处理它。一个设备上可能有多个应用可以处理intent，可以由用户来选择使用哪个应用来处理</li>
+<li>发送电子邮件<ul>
+<li>Intent.ACTION_SENDTO</li>
+<li>Uri “mailto:”</li>
+<li>EXTRA_SUBJECT 邮件主题</li>
+<li>EXTRA_TEXT 邮件正文</li>
+</ul>
+</li>
+</ul>
+<h2 id="本地化"><a href="#本地化" class="headerlink" title="本地化"></a>本地化</h2><ul>
+<li>因设备较多，设计时尽可能遵循最佳实践，支持更多的用户</li>
+<li>本地话你的应用（Localization Checklist），也就是适配到不同的区域</li>
+<li>给应用提供默认资源，也可以根据设备大小，语言，版本等提供替代资源</li>
+<li>让应用支持多语言（Supporting Different Languages）</li>
+<li>使用res下values下的 strings.xml文件，可以实现翻译</li>
+</ul>
+<h2 id="样式和主题-styles-and-schemes"><a href="#样式和主题-styles-and-schemes" class="headerlink" title="样式和主题 styles and schemes"></a>样式和主题 styles and schemes</h2><ul>
+<li>一个样式就是一组可以应用到单个view上的属性集合（height width padding 及字体颜色 字体大小等）</li>
+<li>styles.xml 文件用于定义样式，位于 res/values文件夹下</li>
+<li>根目录是resources</li>
+<li>可以在根目录下自定义样式</li>
+<li>如果需要以现有的样式为基础，可以申明父样式 <strong>parent=”@android:style/–”</strong></li>
+<li>引用样式时的格式 style=”@style/CodeFont”</li>
+</ul>
+<h2 id="学习照"><a href="#学习照" class="headerlink" title="学习照"></a>学习照</h2><p><img src="/images/3B_1.jpg" alt="study image"></p>
+<h2 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h2><p>虽然课程结束了，但这仅仅是一个开始。通过这个入门课程，学到了分析问题，解决问题的方法。<br>再次感谢本课程的讲师及所有在台前幕后无私奉献的自愿者们！<br><img src="/images/3B_2.png" alt="thanks"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;red-lines&quot;&gt;&lt;a href=&quot;#red-lines&quot; class=&quot;headerlink&quot; title=&quot;red lines&quot;&gt;&lt;/a&gt;red lines&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;red lines(用红色标出的交互设计标识)&lt;/li&gt;
+&lt;li&gt;red
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Android入门教程（7）</title>
+    <link href="http://yoursite.com/2016/08/10/3A/"/>
+    <id>http://yoursite.com/2016/08/10/3A/</id>
+    <published>2016-08-10T02:25:04.015Z</published>
+    <updated>2016-06-03T07:56:02.828Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="要点"><a href="#要点" class="headerlink" title="要点"></a>要点</h2><ul>
+<li><p>关于方法</p>
+<ul>
+<li>你可以自己<strong>定义</strong>方法，然后自己<strong>调用</strong></li>
+<li>定义方法，可以精简代码，减少冗余</li>
+<li>点击函数，右键——go to——Declaration，查看函数的定义</li>
+<li>方法的输入和输出，输入叫输入参数，输出叫做返回值</li>
+<li>方法的声明需要的几个要素：返回值类型、方法名、（）、{}、函数体</li>
+</ul>
+</li>
+<li><p>Java 存取修饰词：如 public、private</p>
+<ul>
+<li>private 只能在本类内访问，类外无法访问</li>
+<li>public 都可以调用</li>
+</ul>
+</li>
+<li><p>返回值类型，可以是int、String，也可以是 类</p>
+</li>
+<li>方法名，命名规则和变量一样：（驼峰拼写法）首字母小写，单词头大写；以动词开头</li>
+<li>参数列表，放在<code>()</code>中，可以为空</li>
+<li>方法体位于<code>{}</code>中</li>
+<li>传递给方法的输入叫实参</li>
+<li>形参：方法定义时声明需要的输入</li>
+<li>函数调用 必须与 函数声明的参数个数，参数类型一致，否则报错</li>
+<li>与形式参数不同，返回值只能有一个，不能有多个</li>
+<li>程序无法运行到 return 下面的语句。运行到 return，程序就结束了。</li>
+<li>如果方法不需要返回值，那么在声明方法的时候，返回值类型为 void。</li>
+<li>函数的返回值是单个值，与变量的类型一致</li>
+<li>让代码保持更简洁<ul>
+<li>字符串操作可以使用 <code>+=</code> 运算，相当于字符串追加。</li>
+<li>return 也可以直接返回 表达式</li>
+<li>函数的实参，也可以是函数哦</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/3A_0.jpg" alt="方法"></p>
+<ul>
+<li>一个 android APP主要由资源文件和java文件组成<ul>
+<li>java文件都放在app下的 java目录下</li>
+<li>所有的java文件都是在APP运行时处理，如按钮点击事件</li>
+<li>资源文件放在 app下的 res目录下，是 resource的缩写，包含图片、字符串、颜色、宽高，菜单、布局等 xml文件，及视频、音频文件</li>
+<li>把资源文件和java文件分开的优点是：根据具体的设备加载不同的资源，来让APP表现出最佳的效果。如：在大屏幕设备上呈现另一种布局，只需要替换布局文件即可；如本地换字符串，在一个集中的地方进行字符串替换即可，要比到每一个文件替换方便多了<br>*</li>
+</ul>
+</li>
+<li><p>怎样获取放在资源文件夹的资源呢？<a href="http://developer.android.com/intl/zh-cn/guide/topics/resources/accessing-resources.html" target="_blank" rel="external">Accessing Resources 中文页面</a></p>
+<ul>
+<li>当编译APP的时候，Android中的 <strong>AAPT</strong>工具会生成R类，这是一个叫做 R.java的文件</li>
+<li>R.java文件包含res目录下所有资源文件的ID</li>
+<li>如：R.drawable 对应所有 Drawable资源，而该类型的每个资源都有对应的静态整形数，如 <strong>R.drawable.icon</strong></li>
+<li>访问资源的方法<ol>
+<li>在代码中： R.string.hello</li>
+<li>在XML文件中： @string/hello<br><img src="/images/3A_1.jpg" alt="资源访问"></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>resource 和 Java代码中间的关系</p>
+<ul>
+<li>点击 Just Java应用图标</li>
+<li>打开 MainActivity.java</li>
+<li>初始化</li>
+<li>自动调用 onCreate方法，启动 activity</li>
+<li>重要的一句代码 setContentView(R.layout.activity_main)</li>
+<li>Android 解析 activity_main 这个 xml文件</li>
+<li>然后将 LinearLayout与 Java对象关联</li>
+<li>这些Java对象组成多级view集合</li>
+<li></li>
+</ul>
+</li>
+<li>对象有状态和方法<ul>
+<li>对象中的方法可以操作状态</li>
+<li>如果需要在手机上显示一个 TextView，实际上需要App中Java对象的控制</li>
+<li>当程序运行时，可以通过调用 TextView的方法，来修改Java字段（变量）</li>
+<li>类就像建造房子的平面图，对象就像真实的建造好的房子</li>
+<li>成员变量也叫类的状态，变量以 <strong><em>m</em></strong>开头</li>
+<li>要查看TextView.java源文件，可以在chrome中安装 android sdk search扩展（<strong>注意：</strong>在Engish语言下可用，中文页面不支持）</li>
+<li>面向对象可以隐藏内部实现</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/3A_2.jpg" alt="状态和方法"></p>
+<ul>
+<li>类与对象<ul>
+<li>（<strong>常用</strong>）使用构造函数创建对象 TextView priceTextView = new TextView(context);</li>
+<li>用工厂方法来创建对象 MediaPlayer player = MediaPlayer.create(context, R.raw.song);</li>
+<li>可以上 google 搜索，查看需要使用构造方法，还是工厂方法</li>
+<li></li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/3A_3.jpg" alt="类与对象"></p>
+<ul>
+<li>对象的方法调用<ul>
+<li>格式：<strong>对象变量名.方法名(输入参数);</strong>。如：<strong>titleTextView.setText(“News”);</strong></li>
+<li>传递参数的类型及顺序要与方法参数声明的一致</li>
+<li>类的内部调用和累的外部掉要的区别，内部，省略了<strong><em>this.</em></strong></li>
+<li>在类的内部，可以访问私有变量和私有方法；类外，无法访问私有变量和私有方法</li>
+<li>可以通过extend来直接使用父类的函数</li>
+<li>在子类中可以重载(Override)这个方法</li>
+<li>如果删除了重载的方法，那么就调用父类的方法</li>
+<li>重写父类的方法，可以使用自定义的布局文件</li>
+<li>在 MainActivity中重写onCreate和onCreateOptionsMenu是很有必要的</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>findViewByID的用法</p>
+<ul>
+<li>findViewByID会转换一个视图对象的类型</li>
+<li>不需要给每一个视图设置ID，只需要给用到的设置ID即可</li>
+<li>参数：R.id.<strong>xml文件中设置的ID</strong></li>
+<li>通过findViewByID函数把Java和XML联系起来</li>
+<li>可以使用类型转换，把View 类型转换为TextView类型</li>
+</ul>
+</li>
+<li><p>方法的参数和返回值需要查阅文档来详细了解</p>
+<h2 id="学习照片"><a href="#学习照片" class="headerlink" title="学习照片"></a>学习照片</h2><p><img src="/images/3A_4.jpg" alt="java文件中修改视图显示"></p>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;要点&quot;&gt;&lt;a href=&quot;#要点&quot; class=&quot;headerlink&quot; title=&quot;要点&quot;&gt;&lt;/a&gt;要点&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;关于方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;你可以自己&lt;strong&gt;定义&lt;/strong&gt;方法，然后自己&lt;strong&gt;调用&lt;/
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Android入门教程（5）</title>
+    <link href="http://yoursite.com/2016/08/10/2B_Happy/"/>
+    <id>http://yoursite.com/2016/08/10/2B_Happy/</id>
+    <published>2016-08-10T02:25:03.987Z</published>
+    <updated>2016-06-03T07:54:59.914Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="本节目标"><a href="#本节目标" class="headerlink" title="本节目标"></a>本节目标</h2><ul>
+<li>继续改善<strong>订购咖啡</strong>应用，向终极目标前进</li>
+<li>终极目标效果图如下<br><img src="/images/2B_1.jpg" alt="最终效果图"></li>
+</ul>
+<h2 id="实现第四个效果"><a href="#实现第四个效果" class="headerlink" title="实现第四个效果"></a>实现第四个效果</h2><ul>
+<li>为了更适合人们的浏览习惯，将<code>+</code>、<code>数量</code>和<code>-</code>以<strong>水平</strong>的形式显示</li>
+<li>这种显示方式还可以节省屏幕空间</li>
+<li>为了达到这种效果，可以使用 RelativeView</li>
+<li>教学视频使用了<strong>嵌套 viewgroups</strong>，使用它可以构建更为复杂的Layout</li>
+<li>如果嵌套层数太多，展现界面时消耗就会很大</li>
+<li>抽空自学其他的view group，如： <strong>frame layout、grid layout</strong></li>
+<li>从A、B、C3个选项中，选择需要的布局（<a href="https://gist.github.com/anonymous/256752a04db14a3947a8" target="_blank" rel="external">代码链接</a>）。分析方法：<ol>
+<li>画出view的层次结构</li>
+<li>画出每种方案在设备上的样子</li>
+</ol>
+</li>
+<li>手机上运行效果图<br><img src="/images/2B_2.jpg" alt="手机效果图4"></li>
+</ul>
+<h2 id="实现第五个效果"><a href="#实现第五个效果" class="headerlink" title="实现第五个效果"></a>实现第五个效果</h2><ul>
+<li>应用到了 Java中的字符串类型</li>
+<li>字符串连接<code>+</code></li>
+<li>转义字符<code>\</code>。（<code>\n</code>表示 <strong>换行</strong>）</li>
+<li>手机上运行效果图<br><img src="/images/2B_3.jpg" alt="手机效果图5"></li>
+</ul>
+<h2 id="学习Java中字符串"><a href="#学习Java中字符串" class="headerlink" title="学习Java中字符串"></a>学习Java中字符串</h2><ul>
+<li>字符串的声明和定义与整型数一样：<strong>数据类型 变量名 = 初始值;</strong></li>
+<li>如果字符串里有引号，需要用到<strong>转义字符 ‘/’</strong>。如：<strong>\t、\n、\r、\’、\”、\等</strong></li>
+<li>字符串连接：使用 <strong>+</strong>操作符，将2个字符串首尾相接</li>
+<li>字符串连接的强大之处在于：当句子需要动态显示时，可以动态的部分提取出来<br>  <strong>注意：</strong>字符串连接，需要手动加<strong>空格</strong></li>
+<li>视频18/21中，在饮料前加<code>,</code>，看起来很奇怪。因为：不确定后面是否添加新饮料</li>
+</ul>
+<h2 id="订购咖啡-APP源码"><a href="#订购咖啡-APP源码" class="headerlink" title="订购咖啡 APP源码"></a>订购咖啡 APP源码</h2><ul>
+<li>版本控制使用了 git工具。</li>
+</ul>
+<h2 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>2A 和2B 课程中邀请到的嘉宾 Alice来自<strong>中国</strong>哦，现在参与 <strong>StudyJams</strong>的小伙伴们加油啊<br><img src="/images/2B_vip.jpg" alt="嘉宾"></li>
+</ul>
+<h2 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h2><p>一杯纯手工打造的咖啡，献给所有为该项目付出努力的志愿者们。让我们干杯！</p>
+<p><strong><em>Let’s cheers!</em></strong><br><img src="/images/2B_cheers.jpg" alt="cheers"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;本节目标&quot;&gt;&lt;a href=&quot;#本节目标&quot; class=&quot;headerlink&quot; title=&quot;本节目标&quot;&gt;&lt;/a&gt;本节目标&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;继续改善&lt;strong&gt;订购咖啡&lt;/strong&gt;应用，向终极目标前进&lt;/li&gt;
+&lt;li&gt;终极目标效果图如下&lt;b
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Android入门教程（4）</title>
+    <link href="http://yoursite.com/2016/08/10/2AGoG0GO/"/>
+    <id>http://yoursite.com/2016/08/10/2AGoG0GO/</id>
+    <published>2016-08-10T02:25:03.927Z</published>
+    <updated>2016-06-03T07:54:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="第二节学习要点"><a href="#第二节学习要点" class="headerlink" title="第二节学习要点"></a>第二节学习要点</h2><ol>
+<li>一个<strong>订购咖啡</strong>的应用贯穿本节课程</li>
+<li>给应用增加交互功能，如：<strong>按钮</strong></li>
+<li>学习交互是怎么实现的：学习Java变量和方法</li>
+</ol>
+<h2 id="温习创建APP过程，并为本节做准备"><a href="#温习创建APP过程，并为本节做准备" class="headerlink" title="温习创建APP过程，并为本节做准备"></a>温习创建APP过程，并为本节做准备</h2><ol>
+<li>创建一个名字为 <strong>Just Java</strong>的APP</li>
+<li>创建完成，确保该APP可以在手机上运行显示<strong>Hello world!</strong></li>
+</ol>
+<h2 id="分阶段完成目标"><a href="#分阶段完成目标" class="headerlink" title="分阶段完成目标"></a>分阶段完成目标</h2><p><img src="/images/2A_1.jpg" alt="阶段图1"></p>
+<ol>
+<li><p>显示文本为<strong>QUANTITY</strong>的TextView，文本为<strong>2</strong>的TextView，文本为<strong>ORDER</strong>按钮</p>
+<ul>
+<li>通过<strong>Button的Onclick</strong>属性可以设置点击按钮的动作</li>
+<li>有时候一个活动需要显示多个布局。主活动定义在 MainActivity.java文件中</li>
+<li>8/40 java文件<a href="https://gist.github.com/anonymous/b335094aa30f5866f219" target="_blank" rel="external"><strong><em>链接</em></strong></a>或者<a href="https://github.com/symbolic/Android-resource/blob/master/MainActivity.java" target="_blank" rel="external"><strong><em>备份地址</em></strong></a></li>
+<li>使用例子中的 MainActivity.java，按<strong>ORDER</strong>按钮，数量会变成1。执行过程:<ol>
+<li>点击<strong>ORDER</strong>按钮</li>
+<li>触发 MainActivity中的 <strong>submitOrder</strong>方法。（执行 onClick属性值的方法）<br><img src="/images/2A_3.jpg" alt="学习成果图"></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>增加文本为<strong>PRICE</strong>的TextView，文本为<strong>$10</strong>的TextView</p>
+<ul>
+<li>14/40函数<a href="https://gist.github.com/anonymous/36388d8e8d2608ee1c89" target="_blank" rel="external">链接</a></li>
+<li>尝试<strong>制造一个崩溃</strong>，然后查看错误信息<br><img src="/images/2A_4.jpg" alt="学习成果图"></li>
+</ul>
+</li>
+<li><p>增加<strong>数量增加</strong>和<strong>数量减少</strong>的按钮（<strong>*竖直方式</strong>显示），点击按钮，数量会变化</p>
+<ul>
+<li>增加2个按钮(<strong>增加</strong>按钮和<strong>减少</strong>按钮)</li>
+<li>增加按钮动作</li>
+<li><strong><em>坑：</em></strong> 执行按钮动作的方法需要设置为<strong>public</strong></li>
+<li>使用<strong>伪代码</strong>分析问题</li>
+<li>使用全局变量，可以让<strong>‘+’或者’-‘</strong>操作后，数量连续增减<br><img src="/images/2A_5.jpg" alt="学习成果图"></li>
+</ul>
+</li>
+</ol>
+<p><img src="/images/2A_2.jpg" alt="阶段图2"></p>
+<ol>
+<li><p>以<strong>水平方式</strong>显示<strong>数量增加</strong>和<strong>数量减少</strong>的按钮及<strong>数量</strong> TextView</p>
+<ul>
+<li>先自行查找资料，试图解决问题</li>
+</ul>
+</li>
+<li><p>改变单价显示样式，并把<strong>ORDER</strong>按钮移动到屏幕下方居中位置</p>
+<ul>
+<li>先自行查找资料，试图解决问题</li>
+</ul>
+</li>
+</ol>
+<h2 id="Java语言学习"><a href="#Java语言学习" class="headerlink" title="Java语言学习"></a>Java语言学习</h2><ol>
+<li>Java 语法，有一对大括号。</li>
+<li>声明方法，实现方法后，就可以使用了</li>
+<li>尝试修改 coffee的数量</li>
+<li>使用<strong>表达式</strong>代替表达式的数量</li>
+<li>遇到Java代码错误，看错误信息；也可以执行<strong>撤销</strong>操作，查找原因</li>
+<li>声明变量： <strong>类型 变量名 = 初始值;</strong></li>
+<li>变量命名规则：首字母小写、驼峰式；可读性强；不要太长</li>
+<li>编译时错误 和 运行时错误</li>
+<li>局部变量和全局变量的作用域</li>
+<li>练习使用debugger，调试程序</li>
+</ol>
+<h2 id="学习照"><a href="#学习照" class="headerlink" title="学习照"></a>学习照</h2><p><img src="/images/2A_6.jpg" alt="学习照"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;第二节学习要点&quot;&gt;&lt;a href=&quot;#第二节学习要点&quot; class=&quot;headerlink&quot; title=&quot;第二节学习要点&quot;&gt;&lt;/a&gt;第二节学习要点&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;一个&lt;strong&gt;订购咖啡&lt;/strong&gt;的应用贯穿本节课程&lt;/li&gt;
+&lt;li&gt;给应
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Android入门教程（2）</title>
+    <link href="http://yoursite.com/2016/08/10/1B_BuildingLayout/"/>
+    <id>http://yoursite.com/2016/08/10/1B_BuildingLayout/</id>
+    <published>2016-08-10T02:25:03.884Z</published>
+    <updated>2016-04-06T07:29:25.978Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong> 温习 基本xml语法</strong></p>
+<p><strong> 温习 基本视图中的几个属性</strong></p>
+<p><strong> 本节主要讲解组合布局 LinearLayout 和 RelativeLayout 的使用 </strong></p>
+<p><strong> 使用 google search，查找 关键子 + android </strong></p>
+<h2 id="组合布局"><a href="#组合布局" class="headerlink" title="组合布局"></a>组合布局</h2><ul>
+<li><p>在一个界面需要展示多个 view 的时候，就需要用到 组合布局了。也就是 ViewGroup。用 ViewGroup 把多个 view 组合起来。</p>
+</li>
+<li><p>不能简单地把多个 view 放在一个 xml 文件中：一个 xml 文档中只能有一个 root view，其他的 view 应该放在 root view 里面</p>
+</li>
+<li><p>ViewGroup 也是一种 view，它是一种矩形的 view<br>如：<strong>LinearLayout</strong> 和 <strong>RelativeLayout</strong></p>
+</li>
+<li><p>ViewGroup 是 <strong><em>父view</em></strong>，它里面的其他 view，是其 <strong><em>子view</em></strong>。父view 可以控制 子view 的位置和方式</p>
+</li>
+<li><p>父view 和 子view 之间是 <strong><em>父子关系</em></strong>；子view 之间是 <strong><em>兄弟关系</em></strong></p>
+</li>
+</ul>
+<h2 id="线性布局-LinearLayout"><a href="#线性布局-LinearLayout" class="headerlink" title="线性布局 LinearLayout"></a>线性布局 LinearLayout</h2><ul>
+<li><p>LinearLayout 中的 view 可以按照水平（horizontal） 或者 竖直（vertical） 的方式排列</p>
+</li>
+<li><p>线性布局举例<br><img src="/images/1B_1.jpg" alt="线性布局举例"></p>
+</li>
+</ul>
+<ul>
+<li>等权重子视图：在线性布局中，给各个子视图按比例分配空间</li>
+<li>对于垂直线性布局，把子视图的高度android:layout_height设置为 0dp，权重andour:layout_weight设置为1（或者其他数值）</li>
+<li>对于水平线性布局，宽度android:layout_width = 0，设置权重 android:layout_weight</li>
+</ul>
+<ul>
+<li><p>设置权重以后，在不同的设备上，就可以按照同样的比例平分屏幕高度</p>
+</li>
+<li><p>设置权重的练习1<br><img src="/images/1B_2.jpg" alt="设置权重举例"></p>
+</li>
+<li><p>设置权重的练习2<br><img src="/images/1B_3.jpg" alt="设置权重举例"></p>
+</li>
+</ul>
+<h2 id="相对布局-RelativeLayout"><a href="#相对布局-RelativeLayout" class="headerlink" title="相对布局 RelativeLayout"></a>相对布局 RelativeLayout</h2><ul>
+<li>RelativeLayout 中 view 的排列是相对的，比如 把 子view 放在 父view 的上面 或者 左边；</li>
+</ul>
+<ul>
+<li><p>默认布局：左上角。可同时混搭多个对齐。</p>
+</li>
+<li><p>也可以是 子view 之间相对排列</p>
+</li>
+<li><p>相关的属性，值都是 <strong> true </strong>或者<strong> false </strong></p>
+</li>
+</ul>
+<ul>
+<li><p><a href="http://developer.android.com/reference/android/widget/RelativeLayout.LayoutParams.html" target="_blank" rel="external"><strong><em>官方</em></strong></a>介绍</p>
+</li>
+<li><p>android:id=”@+id/name” 第一次声明需要用到”+”，以后再用，就不需要<strong>+</strong>了</p>
+</li>
+</ul>
+<p>android:layout_alignParentTop 与父视图上边缘对齐</p>
+<p>android:layout_alignParentBottom 与父视图下边缘对齐</p>
+<p>android:layout_alignParentLeft 与父视图左边缘对齐</p>
+<p>android:layout_alignParentRight 与父视图右边缘对齐</p>
+<p>android:layout_above 在参考视图的上方</p>
+<p>android:layout_below 在参考视图的下方</p>
+<p>android:layout_toRightOf 在参考视图的右侧</p>
+<p>android:layout_toRightOf 在参考视图的左侧</p>
+<p>android:layout_alignTop 目标控件和引用控件的上边缘对齐</p>
+<p> android:layout_alignBottom 目标控件和引用控件的下边缘对齐</p>
+<p> android:layout_alignLeft 目标控件和引用控件的左边缘对齐</p>
+<p> android:layout_alignRight 目标控件和引用控件的右边缘对齐</p>
+<p> android:layout_alignBaseLine 基于基准线对齐，基准线就是我们写英文字母那4行线的第三条</p>
+<p> layout_centerInParent 表示与父控件在水平方向和垂直方向都对齐，处于正中央</p>
+<p> layout_centerVertical 表示与父控件在垂直方向上对齐</p>
+<p> layout_centerHorizontal 表示与父控件在水平方向上对齐</p>
+<p> layout_alignStart 与引用控件的开始位置对齐</p>
+<p> layout_alignStop 与引用控件的结束位置对齐</p>
+<p> layout_alignParentStart 表示与父控件的开始位置对齐</p>
+<p> layout_alignParentStop 表示与父控件的位置对齐</p>
+<ul>
+<li><p>相对视图布局举例<br><img src="/images/1B_4.jpg" alt="相对视图布局举例"></p>
+</li>
+<li><p>android:padding和android:layout_margin的区别</p>
+</li>
+</ul>
+<p>padding是站在父view的角度描述问题，它规定它里面的内容必须与这个父view边界的距离。margin则是站在自己的角度描述问题，规定自己和其他（上下左右）的view之间的距离，如果同一级只有一个view，那么它的效果基本上就和padding一样了。例如我的XML layout代码如下：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line">    <span class="attr">android:orientation</span>=<span class="string">"vertical"</span></div><div class="line">    <span class="attr">android:layout_width</span>=<span class="string">"fill_parent"</span></div><div class="line">    <span class="attr">android:layout_height</span>=<span class="string">"fill_parent"</span></div><div class="line">    <span class="attr">android:paddingLeft</span>=<span class="string">"10dip"</span></div><div class="line">    <span class="attr">android:paddingRight</span>=<span class="string">"10dip"</span></div><div class="line">    <span class="attr">android:paddingTop</span>=<span class="string">"10dip"</span></div><div class="line">    <span class="attr">android:paddingBottom</span>=<span class="string">"10dip"</span></div><div class="line">    &gt;</div><div class="line"><span class="tag">&lt;<span class="name">TextView</span>  </span></div><div class="line">    <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></div><div class="line">    <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">    <span class="attr">android:background</span>=<span class="string">"#FF0000"</span></div><div class="line">    <span class="attr">android:text</span>=<span class="string">"@string/hello"</span></div><div class="line">    <span class="attr">android:paddingLeft</span>=<span class="string">"50dip"</span></div><div class="line">    <span class="attr">android:paddingRight</span>=<span class="string">"50dip"</span></div><div class="line">    <span class="attr">android:paddingTop</span>=<span class="string">"50dip"</span></div><div class="line">    <span class="attr">android:paddingBottom</span>=<span class="string">"50dip"</span></div><div class="line">	<span class="attr">android:layout_marginBottom</span>=<span class="string">"10dip"</span></div><div class="line">    /&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">TextView</span>  </span></div><div class="line">    <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></div><div class="line">    <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">    <span class="attr">android:background</span>=<span class="string">"#FF0000"</span></div><div class="line">    <span class="attr">android:text</span>=<span class="string">"@string/hello"</span></div><div class="line">    <span class="attr">android:paddingLeft</span>=<span class="string">"50dip"</span></div><div class="line">    <span class="attr">android:paddingRight</span>=<span class="string">"50dip"</span></div><div class="line">    <span class="attr">android:paddingTop</span>=<span class="string">"50dip"</span></div><div class="line">    <span class="attr">android:paddingBottom</span>=<span class="string">"50dip"</span></div><div class="line"> 	<span class="attr">android:layout_marginBottom</span>=<span class="string">"10dip"</span></div><div class="line">    /&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">TextView</span>  </span></div><div class="line">    <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></div><div class="line">    <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">    <span class="attr">android:background</span>=<span class="string">"#FF0000"</span></div><div class="line">    <span class="attr">android:text</span>=<span class="string">"@string/hello"</span></div><div class="line">    <span class="attr">android:paddingLeft</span>=<span class="string">"50dip"</span></div><div class="line">    <span class="attr">android:paddingRight</span>=<span class="string">"50dip"</span></div><div class="line">    <span class="attr">android:paddingTop</span>=<span class="string">"50dip"</span></div><div class="line">    <span class="attr">android:paddingBottom</span>=<span class="string">"50dip"</span></div><div class="line">    <span class="attr">android:layout_marginBottom</span>=<span class="string">"10dip"</span></div><div class="line">    /&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">TextView</span>  </span></div><div class="line">    <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></div><div class="line">    <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">    <span class="attr">android:background</span>=<span class="string">"#FF0000"</span></div><div class="line">    <span class="attr">android:text</span>=<span class="string">"@string/hello"</span></div><div class="line">    <span class="attr">android:paddingLeft</span>=<span class="string">"50dip"</span></div><div class="line">    <span class="attr">android:paddingRight</span>=<span class="string">"50dip"</span></div><div class="line">    <span class="attr">android:paddingTop</span>=<span class="string">"50dip"</span></div><div class="line">    <span class="attr">android:paddingBottom</span>=<span class="string">"50dip"</span></div><div class="line">    <span class="attr">android:layout_marginBottom</span>=<span class="string">"10dip"</span></div><div class="line">    /&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<ul>
+<li>android:padding和android:layout_margin举例<br><img src="/images/1B_5.jpg" alt="padding 和margin 举例"></li>
+</ul>
+<h2 id="要点"><a href="#要点" class="headerlink" title="要点"></a>要点</h2><ul>
+<li>记得使用 明明空间 “xmlns:android=””</li>
+<li>熟练使用布局的几种属性值</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt; 温习 基本xml语法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; 温习 基本视图中的几个属性&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; 本节主要讲解组合布局 LinearLayout 和 RelativeLayout 的使用 &lt;/strong
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Android入门教程（1）</title>
+    <link href="http://yoursite.com/2016/08/10/1A_BuildingLayout/"/>
+    <id>http://yoursite.com/2016/08/10/1A_BuildingLayout/</id>
+    <published>2016-08-10T02:25:03.842Z</published>
+    <updated>2016-04-06T07:25:51.504Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="为后续课程做准备"><a href="#为后续课程做准备" class="headerlink" title="为后续课程做准备"></a>为后续课程做准备</h2><ul>
+<li><p><strong>[准备工作]</strong> 使用“科学上网”下载 Android Studio （DNS 设置为：<em>115.159.19.22</em>）</p>
+</li>
+<li><p><strong>[准备工作]</strong> 下载并安装JDK</p>
+</li>
+</ul>
+<h2 id="本节课学习要点"><a href="#本节课学习要点" class="headerlink" title="本节课学习要点"></a>本节课学习要点</h2><ul>
+<li><p>VIEW 是在屏幕上展示内容的长方形：如：文本框（TextView）、图片（ImageView）、按钮（Button）等</p>
+</li>
+<li><p>多个 <strong>View</strong> 组合在一起，成为UI</p>
+</li>
+<li><p>View 的名字以（骆驼拼写法：单词间无空格，首字母大写） <strong>CamelCase</strong> 书写，如： TextView、ImageView</p>
+</li>
+<li><p>写代码的空间叫 <strong>IDE</strong>，集成开发环境，在安卓开发中，这个工具是 <strong>Android Studio</strong>。</p>
+</li>
+<li><p>需要用语言告诉计算机，该怎么做事情。比如用 XML （可拓展标记语言）建立布局。</p>
+</li>
+<li><p>XML 语言中有开始和结束。以 <strong>&lt;</strong> 开始， 以 <strong>&gt;</strong> 结束，结尾的地方有 <strong>/</strong>。</p>
+</li>
+<li><p><strong>XML</strong> 元素打开后，都<strong>需要关闭</strong>。有些是自闭标签，有些是关闭标签。</p>
+</li>
+<li><p>XML 元素中也可以有子元素。用关闭标签，就知道有几个子元素了。</p>
+</li>
+<li><p><strong>没有子元素，可以使用自闭标签。有子元素，必须使用自闭标签</strong>。</p>
+</li>
+<li><p>XML 的属性决定了 view 的行为或外观的特性。</p>
+</li>
+<li><p>XML 中属性名放在<strong>左边</strong>，右边是属性值。属性值必须放在<strong>“”</strong>中。</p>
+</li>
+<li><p>所有的属性都有默认值，<strong>不是默认值的需要设置</strong>。</p>
+</li>
+<li><p>人们交流的语言可以使用简写 或者 语法、拼写有误。但<strong>计算机语言必须严谨</strong>。</p>
+</li>
+<li><p>在线 XMLV 的地址 <a href="http://labs.udacity.com/android-visualizer/" target="_blank" rel="external">http://labs.udacity.com/android-visualizer/</a></p>
+</li>
+<li><p>view 中度量长宽的单位是 <strong>dp</strong>（<em>密度无关像素 density-independent pixels</em>）<br><strong>使用 dp 可以在不同的设备物理尺寸大小相同，android 会把它映射到不同数量的像素中</strong>。</p>
+</li>
+<li><p>建议所有的可接触目标，如按钮，长 和 宽 <strong>至少 48dps</strong>。</p>
+</li>
+<li><p>我的第一行 XML 代码。修改相关属性值。制造一个错误，并修复它。</p>
+</li>
+<li><p>罗马不是一天建成的。需要不断修改代码，修改错误，完善功能。道路是曲折的，前途是光明的。</p>
+</li>
+<li><p>排查错误的好习惯和方法：1. 查看错误信息；2. 和正常运行的样例代码比较；3. 使用撤销；4. 寻求帮助</p>
+</li>
+<li><p>关于 wrap_content：使用后，会按照内容的宽度和高度自动调整大小。</p>
+</li>
+<li><p>字号 <strong>textSize 大小的单位是 sp</strong>（比例无关像素）。sp 只适用于字体。</p>
+</li>
+<li><p>建议使用 <strong>Material Design</strong>手册<a href="http://www.google.com/design/spec/style/typography.html#" target="_blank" rel="external">推荐</a>的大小，或者 <em>android 提供的标准</em>（小号、中号、大号）。</p>
+</li>
+<li><p>android 提供的色系中没有 blue 哦，可以通过指定 16进制颜色代码来设置。<br>  <a href="https://www.google.com/design/spec/style/color.html" target="_blank" rel="external">https://www.google.com/design/spec/style/color.html</a></p>
+<ul>
+<li>使用 关键词+android, 在 google 搜索，进入 android 开发者网站： <a href="https://developers.google.com/" target="_blank" rel="external">https://developers.google.com/</a> ,可以在文档内搜索。</li>
+</ul>
+</li>
+</ul>
+<h2 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h2><ul>
+<li>自闭标签</li>
+</ul>
+<p><img src="/images/1A_1.jpg" alt=""></p>
+<ul>
+<li>关闭标签</li>
+</ul>
+<p><img src="/images/1A_2.jpg" alt=""></p>
+<ul>
+<li>在 XMLV中编辑XML文件</li>
+</ul>
+<p><img src="/images/1A_3.jpg" alt=""></p>
+<ul>
+<li>制造一个 XML语法错误</li>
+</ul>
+<p><img src="/images/1A_4.jpg" alt=""></p>
+<ul>
+<li>修复 XML语法错误</li>
+</ul>
+<p><img src="/images/1A_5.jpg" alt=""></p>
+<ul>
+<li>在宽度和高度中使用 wrap_content属性值</li>
+</ul>
+<p><img src="/images/1A_6.jpg" alt=""></p>
+<ul>
+<li>使用 textSize设置字号</li>
+</ul>
+<p><img src="/images/1A_7.jpg" alt=""></p>
+<ul>
+<li>在宽度和高度中使用 textAppearanceLarge 属性值</li>
+</ul>
+<p><img src="/images/1A_8.jpg" alt=""></p>
+<ul>
+<li>自己动手，设置 textStyle</li>
+</ul>
+<p><img src="/images/1A_9.jpg" alt=""></p>
+<ul>
+<li>自己动手，设置 background</li>
+</ul>
+<p><img src="/images/1A_10.jpg" alt=""></p>
+<ul>
+<li>自己动手，设置 background 和 textColor</li>
+</ul>
+<p><img src="/images/1A_11.jpg" alt=""></p>
+<h2 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h2><ol>
+<li><a href="https://www.google.com/design/spec/material-design/introduction.html#" target="_blank" rel="external">Material Design介绍</a></li>
+</ol>
+<ul>
+<li><p><a href="https://www.google.com/design/spec/style/color.html" target="_blank" rel="external">Material Design中的颜色</a></p>
+</li>
+<li><p><a href="https://www.google.com/design/spec/style/typography.html" target="_blank" rel="external">Material Design中的字号</a></p>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;为后续课程做准备&quot;&gt;&lt;a href=&quot;#为后续课程做准备&quot; class=&quot;headerlink&quot; title=&quot;为后续课程做准备&quot;&gt;&lt;/a&gt;为后续课程做准备&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;[准备工作]&lt;/strong&gt; 使用“科学上网”下载 An
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2016/08/10/hello-world/"/>
+    <id>http://yoursite.com/2016/08/10/hello-world/</id>
+    <published>2016-08-10T02:04:51.380Z</published>
+    <updated>2016-03-18T11:26:46.258Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>

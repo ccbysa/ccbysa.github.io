@@ -1,0 +1,40 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>Android入门教程（5） | Hexo</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/4.2.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Android入门教程（5）</h1><a id="logo" href="/.">Hexo</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> Home</i></a><a href="/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/about/"><i class="fa fa-user"> About</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Android入门教程（5）</h1><div class="post-meta">Aug 10, 2016<script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><h2 id="本节目标"><a href="#本节目标" class="headerlink" title="本节目标"></a>本节目标</h2><ul>
+<li>继续改善<strong>订购咖啡</strong>应用，向终极目标前进</li>
+<li>终极目标效果图如下<br><img src="/images/2B_1.jpg" alt="最终效果图"></li>
+</ul>
+<h2 id="实现第四个效果"><a href="#实现第四个效果" class="headerlink" title="实现第四个效果"></a>实现第四个效果</h2><ul>
+<li>为了更适合人们的浏览习惯，将<code>+</code>、<code>数量</code>和<code>-</code>以<strong>水平</strong>的形式显示</li>
+<li>这种显示方式还可以节省屏幕空间</li>
+<li>为了达到这种效果，可以使用 RelativeView</li>
+<li>教学视频使用了<strong>嵌套 viewgroups</strong>，使用它可以构建更为复杂的Layout</li>
+<li>如果嵌套层数太多，展现界面时消耗就会很大</li>
+<li>抽空自学其他的view group，如： <strong>frame layout、grid layout</strong></li>
+<li>从A、B、C3个选项中，选择需要的布局（<a href="https://gist.github.com/anonymous/256752a04db14a3947a8" target="_blank" rel="external">代码链接</a>）。分析方法：<ol>
+<li>画出view的层次结构</li>
+<li>画出每种方案在设备上的样子</li>
+</ol>
+</li>
+<li>手机上运行效果图<br><img src="/images/2B_2.jpg" alt="手机效果图4"></li>
+</ul>
+<h2 id="实现第五个效果"><a href="#实现第五个效果" class="headerlink" title="实现第五个效果"></a>实现第五个效果</h2><ul>
+<li>应用到了 Java中的字符串类型</li>
+<li>字符串连接<code>+</code></li>
+<li>转义字符<code>\</code>。（<code>\n</code>表示 <strong>换行</strong>）</li>
+<li>手机上运行效果图<br><img src="/images/2B_3.jpg" alt="手机效果图5"></li>
+</ul>
+<h2 id="学习Java中字符串"><a href="#学习Java中字符串" class="headerlink" title="学习Java中字符串"></a>学习Java中字符串</h2><ul>
+<li>字符串的声明和定义与整型数一样：<strong>数据类型 变量名 = 初始值;</strong></li>
+<li>如果字符串里有引号，需要用到<strong>转义字符 ‘/’</strong>。如：<strong>\t、\n、\r、\’、\”、\等</strong></li>
+<li>字符串连接：使用 <strong>+</strong>操作符，将2个字符串首尾相接</li>
+<li>字符串连接的强大之处在于：当句子需要动态显示时，可以动态的部分提取出来<br>  <strong>注意：</strong>字符串连接，需要手动加<strong>空格</strong></li>
+<li>视频18/21中，在饮料前加<code>,</code>，看起来很奇怪。因为：不确定后面是否添加新饮料</li>
+</ul>
+<h2 id="订购咖啡-APP源码"><a href="#订购咖啡-APP源码" class="headerlink" title="订购咖啡 APP源码"></a>订购咖啡 APP源码</h2><ul>
+<li>版本控制使用了 git工具。</li>
+</ul>
+<h2 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>2A 和2B 课程中邀请到的嘉宾 Alice来自<strong>中国</strong>哦，现在参与 <strong>StudyJams</strong>的小伙伴们加油啊<br><img src="/images/2B_vip.jpg" alt="嘉宾"></li>
+</ul>
+<h2 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h2><p>一杯纯手工打造的咖啡，献给所有为该项目付出努力的志愿者们。让我们干杯！</p>
+<p><strong><em>Let’s cheers!</em></strong><br><img src="/images/2B_cheers.jpg" alt="cheers"></p>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://yoursite.com/2016/08/10/2B_Happy/" data-id="ciro9yr8z0004s8uj85502m3c" class="article-share-link">Share</a><div class="tags"></div><div class="post-nav"><a href="/2016/08/10/3A/" class="pre">Android入门教程（7）</a><a href="/2016/08/10/2AGoG0GO/" class="next">Android入门教程（4）</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://yoursite.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Categories</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/PS2/">Android入门教程（6）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/PS1+Coffee/">Android入门教程（3）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/MarkDownFormat/">发布 Markdown格式的帖子</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/3B/">Android入门教程（8）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/3A/">Android入门教程（7）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/2B_Happy/">Android入门教程（5）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/2AGoG0GO/">Android入门教程（4）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/1B_BuildingLayout/">Android入门教程（2）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/1A_BuildingLayout/">Android入门教程（1）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/hello-world/">Hello World</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Blogroll</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">Hexo.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

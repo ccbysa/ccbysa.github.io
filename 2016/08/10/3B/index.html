@@ -1,0 +1,101 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>Android入门教程（8） | Hexo</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/4.2.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Android入门教程（8）</h1><a id="logo" href="/.">Hexo</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> Home</i></a><a href="/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/about/"><i class="fa fa-user"> About</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Android入门教程（8）</h1><div class="post-meta">Aug 10, 2016<script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><h2 id="red-lines"><a href="#red-lines" class="headerlink" title="red lines"></a>red lines</h2><ul>
+<li>red lines(用红色标出的交互设计标识)</li>
+<li>red lines 是对app可视化界面的详细说明</li>
+<li>red lines 可能包括颜色、view的大小、间距、字体大小、字体颜色等</li>
+</ul>
+<h2 id="boolean-数据类型"><a href="#boolean-数据类型" class="headerlink" title="boolean 数据类型"></a>boolean 数据类型</h2><ul>
+<li>boolean 是java的一个基本数据类型</li>
+<li>只有2个状态，true 或者 false</li>
+<li>占1 bit存储空间</li>
+<li>声明： <strong><em>*boolean hasWhippedCream = true;</em></strong></li>
+<li>变量的命名一般以<strong><em>is</em></strong> 或者 <strong><em>has</em></strong>开头</li>
+</ul>
+<h2 id="复选框-checkbox"><a href="#复选框-checkbox" class="headerlink" title="复选框 checkbox"></a>复选框 checkbox</h2><ul>
+<li>解决问题办法：遇到不懂的，用 <strong><em>关键词+ android</em></strong> 问 google</li>
+<li>怎么知道复选框是否被勾上了呢？<ul>
+<li>创建 checkbox后，会自动生成一个java对象</li>
+<li>这个Java对象中有一个boolean类型的变量</li>
+<li>变量的状态(true 或者 false)表示 checkbox 是否被选定</li>
+<li>true表示被选中，false 表示未选中</li>
+</ul>
+</li>
+</ul>
+<h2 id="文本框-EditText"><a href="#文本框-EditText" class="headerlink" title="文本框 EditText"></a>文本框 EditText</h2><ul>
+<li>android:hint属性：设置当EditText内容为空时显示的文本</li>
+<li>android:textColorHint属性设置你想要的颜色</li>
+<li>android:enabled=”false”可以实现不可编辑，可以获得焦点。这时候我们看到EditText和一个TextView差不多</li>
+<li>实现类似html中Textarea的文本域。在Android中没有专门的文本域组件，但是可以通过设置EditText的高来实现同样的文本域功能</li>
+<li>密码文本框。密码输入也是Android应用常用的功能，通过配置EditText的android:password=”true”就可以实现这一密码输入功能</li>
+<li>android:phoneNumber=”true”就可以把EditText变成只接受电话号码输入的文本框，连软键盘都已经变成拨号专用软键盘了</li>
+<li></li>
+</ul>
+<h2 id="如何让屏幕上下滚动？"><a href="#如何让屏幕上下滚动？" class="headerlink" title="如何让屏幕上下滚动？"></a>如何让屏幕上下滚动？</h2><ul>
+<li>使用ScrollView</li>
+<li>以前的<strong>fill_parent</strong>就是现在的<strong>match_parent</strong></li>
+<li>把当前的试图放入ScrollView中，<strong>ScrollView</strong>只可以包含一个项目</li>
+<li>使用ScrollView可以让试图在不同的设备上运行</li>
+</ul>
+<h2 id="流程控制语句"><a href="#流程控制语句" class="headerlink" title="流程控制语句"></a>流程控制语句</h2><ul>
+<li>通常代码是一行一行从上往下执行的，通过流程控制语句，可以改变程序的执行顺序</li>
+<li>if/else 代码块<ul>
+<li>if语句执行完毕后，会自动跳过else语句块</li>
+<li>当判断语句的逻辑运算结果为true时执行{}内的语句</li>
+<li>逻辑语句可以是boolean，也可以是&gt;、&lt;、 ==等表达式</li>
+<li>在测试过程中，要把所有的组合都考虑到</li>
+</ul>
+</li>
+</ul>
+<h2 id="Just-Java中实现的功能"><a href="#Just-Java中实现的功能" class="headerlink" title="Just Java中实现的功能"></a>Just Java中实现的功能</h2><ul>
+<li>按<strong>增加</strong>和<strong>减少</strong>按钮，价格动态刷新</li>
+<li>按ORDER按钮后，显示订单详情</li>
+<li>按RESEt按钮，数量设置为1，不添加任何东西，并显示价格</li>
+<li>数量在【1， 100】范围内，超过范围数量不变</li>
+<li></li>
+</ul>
+<h2 id="toast的用法"><a href="#toast的用法" class="headerlink" title="toast的用法"></a>toast的用法</h2><ul>
+<li><p>第一种方法的Java代码： </p>
+<ul>
+<li>makeText(Context context, int resId, int duration)<br>参数：context是toast显示在哪个上下文，通常是当前Activity；resId指显示内容引用Resouce那条数据，就是从R类中去指定显示的消息内容；duration指定显示时间，Toast默认有LENGTH_SHORT和LENGTH_LONG两常量，分别表示短时间显示和长时间显示。</li>
+</ul>
+</li>
+<li><p>第二种方法的Java代码： </p>
+<ul>
+<li>makeText(Context context, CharSequence text, int duration)<br>参数context和duration与第一个方法相同，参数text可以自己写消息内容。</li>
+</ul>
+</li>
+<li><p>用上面任意方法创建Toast对象之后调用方法show()即可显示。</p>
+<pre><code>Toast toast = Toast.makeText(MainActivity.this, &quot;This is a toast!&quot;, Toast.LENGTH_SHORT); 
+
+toast.show();
+</code></pre></li>
+</ul>
+<h2 id="intent方法"><a href="#intent方法" class="headerlink" title="intent方法"></a>intent方法</h2><ul>
+<li>intent是一个可以用来要求其它应用组件完成某些特定动作的消息</li>
+<li>可以查看地图、打开相机、发送邮件等</li>
+<li>最酷的功能是，你不需要知道哪些应用来处理它。一个设备上可能有多个应用可以处理intent，可以由用户来选择使用哪个应用来处理</li>
+<li>发送电子邮件<ul>
+<li>Intent.ACTION_SENDTO</li>
+<li>Uri “mailto:”</li>
+<li>EXTRA_SUBJECT 邮件主题</li>
+<li>EXTRA_TEXT 邮件正文</li>
+</ul>
+</li>
+</ul>
+<h2 id="本地化"><a href="#本地化" class="headerlink" title="本地化"></a>本地化</h2><ul>
+<li>因设备较多，设计时尽可能遵循最佳实践，支持更多的用户</li>
+<li>本地话你的应用（Localization Checklist），也就是适配到不同的区域</li>
+<li>给应用提供默认资源，也可以根据设备大小，语言，版本等提供替代资源</li>
+<li>让应用支持多语言（Supporting Different Languages）</li>
+<li>使用res下values下的 strings.xml文件，可以实现翻译</li>
+</ul>
+<h2 id="样式和主题-styles-and-schemes"><a href="#样式和主题-styles-and-schemes" class="headerlink" title="样式和主题 styles and schemes"></a>样式和主题 styles and schemes</h2><ul>
+<li>一个样式就是一组可以应用到单个view上的属性集合（height width padding 及字体颜色 字体大小等）</li>
+<li>styles.xml 文件用于定义样式，位于 res/values文件夹下</li>
+<li>根目录是resources</li>
+<li>可以在根目录下自定义样式</li>
+<li>如果需要以现有的样式为基础，可以申明父样式 <strong>parent=”@android:style/–”</strong></li>
+<li>引用样式时的格式 style=”@style/CodeFont”</li>
+</ul>
+<h2 id="学习照"><a href="#学习照" class="headerlink" title="学习照"></a>学习照</h2><p><img src="/images/3B_1.jpg" alt="study image"></p>
+<h2 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h2><p>虽然课程结束了，但这仅仅是一个开始。通过这个入门课程，学到了分析问题，解决问题的方法。<br>再次感谢本课程的讲师及所有在台前幕后无私奉献的自愿者们！<br><img src="/images/3B_2.png" alt="thanks"></p>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://yoursite.com/2016/08/10/3B/" data-id="ciro9yr9a0006s8ujstsz1o5f" class="article-share-link">Share</a><div class="tags"></div><div class="post-nav"><a href="/2016/08/10/MarkDownFormat/" class="pre">发布 Markdown格式的帖子</a><a href="/2016/08/10/3A/" class="next">Android入门教程（7）</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://yoursite.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Categories</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/PS2/">Android入门教程（6）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/PS1+Coffee/">Android入门教程（3）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/MarkDownFormat/">发布 Markdown格式的帖子</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/3B/">Android入门教程（8）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/3A/">Android入门教程（7）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/2B_Happy/">Android入门教程（5）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/2AGoG0GO/">Android入门教程（4）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/1B_BuildingLayout/">Android入门教程（2）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/1A_BuildingLayout/">Android入门教程（1）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/hello-world/">Hello World</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Blogroll</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">Hexo.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

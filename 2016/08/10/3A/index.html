@@ -1,0 +1,120 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>Android入门教程（7） | Hexo</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/4.2.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Android入门教程（7）</h1><a id="logo" href="/.">Hexo</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> Home</i></a><a href="/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/about/"><i class="fa fa-user"> About</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Android入门教程（7）</h1><div class="post-meta">Aug 10, 2016<script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><h2 id="要点"><a href="#要点" class="headerlink" title="要点"></a>要点</h2><ul>
+<li><p>关于方法</p>
+<ul>
+<li>你可以自己<strong>定义</strong>方法，然后自己<strong>调用</strong></li>
+<li>定义方法，可以精简代码，减少冗余</li>
+<li>点击函数，右键——go to——Declaration，查看函数的定义</li>
+<li>方法的输入和输出，输入叫输入参数，输出叫做返回值</li>
+<li>方法的声明需要的几个要素：返回值类型、方法名、（）、{}、函数体</li>
+</ul>
+</li>
+<li><p>Java 存取修饰词：如 public、private</p>
+<ul>
+<li>private 只能在本类内访问，类外无法访问</li>
+<li>public 都可以调用</li>
+</ul>
+</li>
+<li><p>返回值类型，可以是int、String，也可以是 类</p>
+</li>
+<li>方法名，命名规则和变量一样：（驼峰拼写法）首字母小写，单词头大写；以动词开头</li>
+<li>参数列表，放在<code>()</code>中，可以为空</li>
+<li>方法体位于<code>{}</code>中</li>
+<li>传递给方法的输入叫实参</li>
+<li>形参：方法定义时声明需要的输入</li>
+<li>函数调用 必须与 函数声明的参数个数，参数类型一致，否则报错</li>
+<li>与形式参数不同，返回值只能有一个，不能有多个</li>
+<li>程序无法运行到 return 下面的语句。运行到 return，程序就结束了。</li>
+<li>如果方法不需要返回值，那么在声明方法的时候，返回值类型为 void。</li>
+<li>函数的返回值是单个值，与变量的类型一致</li>
+<li>让代码保持更简洁<ul>
+<li>字符串操作可以使用 <code>+=</code> 运算，相当于字符串追加。</li>
+<li>return 也可以直接返回 表达式</li>
+<li>函数的实参，也可以是函数哦</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/3A_0.jpg" alt="方法"></p>
+<ul>
+<li>一个 android APP主要由资源文件和java文件组成<ul>
+<li>java文件都放在app下的 java目录下</li>
+<li>所有的java文件都是在APP运行时处理，如按钮点击事件</li>
+<li>资源文件放在 app下的 res目录下，是 resource的缩写，包含图片、字符串、颜色、宽高，菜单、布局等 xml文件，及视频、音频文件</li>
+<li>把资源文件和java文件分开的优点是：根据具体的设备加载不同的资源，来让APP表现出最佳的效果。如：在大屏幕设备上呈现另一种布局，只需要替换布局文件即可；如本地换字符串，在一个集中的地方进行字符串替换即可，要比到每一个文件替换方便多了<br>*</li>
+</ul>
+</li>
+<li><p>怎样获取放在资源文件夹的资源呢？<a href="http://developer.android.com/intl/zh-cn/guide/topics/resources/accessing-resources.html" target="_blank" rel="external">Accessing Resources 中文页面</a></p>
+<ul>
+<li>当编译APP的时候，Android中的 <strong>AAPT</strong>工具会生成R类，这是一个叫做 R.java的文件</li>
+<li>R.java文件包含res目录下所有资源文件的ID</li>
+<li>如：R.drawable 对应所有 Drawable资源，而该类型的每个资源都有对应的静态整形数，如 <strong>R.drawable.icon</strong></li>
+<li>访问资源的方法<ol>
+<li>在代码中： R.string.hello</li>
+<li>在XML文件中： @string/hello<br><img src="/images/3A_1.jpg" alt="资源访问"></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>resource 和 Java代码中间的关系</p>
+<ul>
+<li>点击 Just Java应用图标</li>
+<li>打开 MainActivity.java</li>
+<li>初始化</li>
+<li>自动调用 onCreate方法，启动 activity</li>
+<li>重要的一句代码 setContentView(R.layout.activity_main)</li>
+<li>Android 解析 activity_main 这个 xml文件</li>
+<li>然后将 LinearLayout与 Java对象关联</li>
+<li>这些Java对象组成多级view集合</li>
+<li></li>
+</ul>
+</li>
+<li>对象有状态和方法<ul>
+<li>对象中的方法可以操作状态</li>
+<li>如果需要在手机上显示一个 TextView，实际上需要App中Java对象的控制</li>
+<li>当程序运行时，可以通过调用 TextView的方法，来修改Java字段（变量）</li>
+<li>类就像建造房子的平面图，对象就像真实的建造好的房子</li>
+<li>成员变量也叫类的状态，变量以 <strong><em>m</em></strong>开头</li>
+<li>要查看TextView.java源文件，可以在chrome中安装 android sdk search扩展（<strong>注意：</strong>在Engish语言下可用，中文页面不支持）</li>
+<li>面向对象可以隐藏内部实现</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/3A_2.jpg" alt="状态和方法"></p>
+<ul>
+<li>类与对象<ul>
+<li>（<strong>常用</strong>）使用构造函数创建对象 TextView priceTextView = new TextView(context);</li>
+<li>用工厂方法来创建对象 MediaPlayer player = MediaPlayer.create(context, R.raw.song);</li>
+<li>可以上 google 搜索，查看需要使用构造方法，还是工厂方法</li>
+<li></li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/3A_3.jpg" alt="类与对象"></p>
+<ul>
+<li>对象的方法调用<ul>
+<li>格式：<strong>对象变量名.方法名(输入参数);</strong>。如：<strong>titleTextView.setText(“News”);</strong></li>
+<li>传递参数的类型及顺序要与方法参数声明的一致</li>
+<li>类的内部调用和累的外部掉要的区别，内部，省略了<strong><em>this.</em></strong></li>
+<li>在类的内部，可以访问私有变量和私有方法；类外，无法访问私有变量和私有方法</li>
+<li>可以通过extend来直接使用父类的函数</li>
+<li>在子类中可以重载(Override)这个方法</li>
+<li>如果删除了重载的方法，那么就调用父类的方法</li>
+<li>重写父类的方法，可以使用自定义的布局文件</li>
+<li>在 MainActivity中重写onCreate和onCreateOptionsMenu是很有必要的</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>findViewByID的用法</p>
+<ul>
+<li>findViewByID会转换一个视图对象的类型</li>
+<li>不需要给每一个视图设置ID，只需要给用到的设置ID即可</li>
+<li>参数：R.id.<strong>xml文件中设置的ID</strong></li>
+<li>通过findViewByID函数把Java和XML联系起来</li>
+<li>可以使用类型转换，把View 类型转换为TextView类型</li>
+</ul>
+</li>
+<li><p>方法的参数和返回值需要查阅文档来详细了解</p>
+<h2 id="学习照片"><a href="#学习照片" class="headerlink" title="学习照片"></a>学习照片</h2><p><img src="/images/3A_4.jpg" alt="java文件中修改视图显示"></p>
+</li>
+</ul>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://yoursite.com/2016/08/10/3A/" data-id="ciro9yr930005s8uj2axxuttr" class="article-share-link">Share</a><div class="tags"></div><div class="post-nav"><a href="/2016/08/10/3B/" class="pre">Android入门教程（8）</a><a href="/2016/08/10/2B_Happy/" class="next">Android入门教程（5）</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://yoursite.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Categories</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/PS2/">Android入门教程（6）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/PS1+Coffee/">Android入门教程（3）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/MarkDownFormat/">发布 Markdown格式的帖子</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/3B/">Android入门教程（8）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/3A/">Android入门教程（7）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/2B_Happy/">Android入门教程（5）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/2AGoG0GO/">Android入门教程（4）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/1B_BuildingLayout/">Android入门教程（2）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/1A_BuildingLayout/">Android入门教程（1）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/hello-world/">Hello World</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Blogroll</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">Hexo.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

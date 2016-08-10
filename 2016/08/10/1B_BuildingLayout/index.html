@@ -1,0 +1,87 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>Android入门教程（2） | Hexo</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/4.2.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Android入门教程（2）</h1><a id="logo" href="/.">Hexo</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> Home</i></a><a href="/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/about/"><i class="fa fa-user"> About</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Android入门教程（2）</h1><div class="post-meta">Aug 10, 2016<script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><p><strong> 温习 基本xml语法</strong></p>
+<p><strong> 温习 基本视图中的几个属性</strong></p>
+<p><strong> 本节主要讲解组合布局 LinearLayout 和 RelativeLayout 的使用 </strong></p>
+<p><strong> 使用 google search，查找 关键子 + android </strong></p>
+<h2 id="组合布局"><a href="#组合布局" class="headerlink" title="组合布局"></a>组合布局</h2><ul>
+<li><p>在一个界面需要展示多个 view 的时候，就需要用到 组合布局了。也就是 ViewGroup。用 ViewGroup 把多个 view 组合起来。</p>
+</li>
+<li><p>不能简单地把多个 view 放在一个 xml 文件中：一个 xml 文档中只能有一个 root view，其他的 view 应该放在 root view 里面</p>
+</li>
+<li><p>ViewGroup 也是一种 view，它是一种矩形的 view<br>如：<strong>LinearLayout</strong> 和 <strong>RelativeLayout</strong></p>
+</li>
+<li><p>ViewGroup 是 <strong><em>父view</em></strong>，它里面的其他 view，是其 <strong><em>子view</em></strong>。父view 可以控制 子view 的位置和方式</p>
+</li>
+<li><p>父view 和 子view 之间是 <strong><em>父子关系</em></strong>；子view 之间是 <strong><em>兄弟关系</em></strong></p>
+</li>
+</ul>
+<h2 id="线性布局-LinearLayout"><a href="#线性布局-LinearLayout" class="headerlink" title="线性布局 LinearLayout"></a>线性布局 LinearLayout</h2><ul>
+<li><p>LinearLayout 中的 view 可以按照水平（horizontal） 或者 竖直（vertical） 的方式排列</p>
+</li>
+<li><p>线性布局举例<br><img src="/images/1B_1.jpg" alt="线性布局举例"></p>
+</li>
+</ul>
+<ul>
+<li>等权重子视图：在线性布局中，给各个子视图按比例分配空间</li>
+<li>对于垂直线性布局，把子视图的高度android:layout_height设置为 0dp，权重andour:layout_weight设置为1（或者其他数值）</li>
+<li>对于水平线性布局，宽度android:layout_width = 0，设置权重 android:layout_weight</li>
+</ul>
+<ul>
+<li><p>设置权重以后，在不同的设备上，就可以按照同样的比例平分屏幕高度</p>
+</li>
+<li><p>设置权重的练习1<br><img src="/images/1B_2.jpg" alt="设置权重举例"></p>
+</li>
+<li><p>设置权重的练习2<br><img src="/images/1B_3.jpg" alt="设置权重举例"></p>
+</li>
+</ul>
+<h2 id="相对布局-RelativeLayout"><a href="#相对布局-RelativeLayout" class="headerlink" title="相对布局 RelativeLayout"></a>相对布局 RelativeLayout</h2><ul>
+<li>RelativeLayout 中 view 的排列是相对的，比如 把 子view 放在 父view 的上面 或者 左边；</li>
+</ul>
+<ul>
+<li><p>默认布局：左上角。可同时混搭多个对齐。</p>
+</li>
+<li><p>也可以是 子view 之间相对排列</p>
+</li>
+<li><p>相关的属性，值都是 <strong> true </strong>或者<strong> false </strong></p>
+</li>
+</ul>
+<ul>
+<li><p><a href="http://developer.android.com/reference/android/widget/RelativeLayout.LayoutParams.html" target="_blank" rel="external"><strong><em>官方</em></strong></a>介绍</p>
+</li>
+<li><p>android:id=”@+id/name” 第一次声明需要用到”+”，以后再用，就不需要<strong>+</strong>了</p>
+</li>
+</ul>
+<p>android:layout_alignParentTop 与父视图上边缘对齐</p>
+<p>android:layout_alignParentBottom 与父视图下边缘对齐</p>
+<p>android:layout_alignParentLeft 与父视图左边缘对齐</p>
+<p>android:layout_alignParentRight 与父视图右边缘对齐</p>
+<p>android:layout_above 在参考视图的上方</p>
+<p>android:layout_below 在参考视图的下方</p>
+<p>android:layout_toRightOf 在参考视图的右侧</p>
+<p>android:layout_toRightOf 在参考视图的左侧</p>
+<p>android:layout_alignTop 目标控件和引用控件的上边缘对齐</p>
+<p> android:layout_alignBottom 目标控件和引用控件的下边缘对齐</p>
+<p> android:layout_alignLeft 目标控件和引用控件的左边缘对齐</p>
+<p> android:layout_alignRight 目标控件和引用控件的右边缘对齐</p>
+<p> android:layout_alignBaseLine 基于基准线对齐，基准线就是我们写英文字母那4行线的第三条</p>
+<p> layout_centerInParent 表示与父控件在水平方向和垂直方向都对齐，处于正中央</p>
+<p> layout_centerVertical 表示与父控件在垂直方向上对齐</p>
+<p> layout_centerHorizontal 表示与父控件在水平方向上对齐</p>
+<p> layout_alignStart 与引用控件的开始位置对齐</p>
+<p> layout_alignStop 与引用控件的结束位置对齐</p>
+<p> layout_alignParentStart 表示与父控件的开始位置对齐</p>
+<p> layout_alignParentStop 表示与父控件的位置对齐</p>
+<ul>
+<li><p>相对视图布局举例<br><img src="/images/1B_4.jpg" alt="相对视图布局举例"></p>
+</li>
+<li><p>android:padding和android:layout_margin的区别</p>
+</li>
+</ul>
+<p>padding是站在父view的角度描述问题，它规定它里面的内容必须与这个父view边界的距离。margin则是站在自己的角度描述问题，规定自己和其他（上下左右）的view之间的距离，如果同一级只有一个view，那么它的效果基本上就和padding一样了。例如我的XML layout代码如下：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line">    <span class="attr">android:orientation</span>=<span class="string">"vertical"</span></div><div class="line">    <span class="attr">android:layout_width</span>=<span class="string">"fill_parent"</span></div><div class="line">    <span class="attr">android:layout_height</span>=<span class="string">"fill_parent"</span></div><div class="line">    <span class="attr">android:paddingLeft</span>=<span class="string">"10dip"</span></div><div class="line">    <span class="attr">android:paddingRight</span>=<span class="string">"10dip"</span></div><div class="line">    <span class="attr">android:paddingTop</span>=<span class="string">"10dip"</span></div><div class="line">    <span class="attr">android:paddingBottom</span>=<span class="string">"10dip"</span></div><div class="line">    &gt;</div><div class="line"><span class="tag">&lt;<span class="name">TextView</span>  </span></div><div class="line">    <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></div><div class="line">    <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">    <span class="attr">android:background</span>=<span class="string">"#FF0000"</span></div><div class="line">    <span class="attr">android:text</span>=<span class="string">"@string/hello"</span></div><div class="line">    <span class="attr">android:paddingLeft</span>=<span class="string">"50dip"</span></div><div class="line">    <span class="attr">android:paddingRight</span>=<span class="string">"50dip"</span></div><div class="line">    <span class="attr">android:paddingTop</span>=<span class="string">"50dip"</span></div><div class="line">    <span class="attr">android:paddingBottom</span>=<span class="string">"50dip"</span></div><div class="line">	<span class="attr">android:layout_marginBottom</span>=<span class="string">"10dip"</span></div><div class="line">    /&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">TextView</span>  </span></div><div class="line">    <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></div><div class="line">    <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">    <span class="attr">android:background</span>=<span class="string">"#FF0000"</span></div><div class="line">    <span class="attr">android:text</span>=<span class="string">"@string/hello"</span></div><div class="line">    <span class="attr">android:paddingLeft</span>=<span class="string">"50dip"</span></div><div class="line">    <span class="attr">android:paddingRight</span>=<span class="string">"50dip"</span></div><div class="line">    <span class="attr">android:paddingTop</span>=<span class="string">"50dip"</span></div><div class="line">    <span class="attr">android:paddingBottom</span>=<span class="string">"50dip"</span></div><div class="line"> 	<span class="attr">android:layout_marginBottom</span>=<span class="string">"10dip"</span></div><div class="line">    /&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">TextView</span>  </span></div><div class="line">    <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></div><div class="line">    <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">    <span class="attr">android:background</span>=<span class="string">"#FF0000"</span></div><div class="line">    <span class="attr">android:text</span>=<span class="string">"@string/hello"</span></div><div class="line">    <span class="attr">android:paddingLeft</span>=<span class="string">"50dip"</span></div><div class="line">    <span class="attr">android:paddingRight</span>=<span class="string">"50dip"</span></div><div class="line">    <span class="attr">android:paddingTop</span>=<span class="string">"50dip"</span></div><div class="line">    <span class="attr">android:paddingBottom</span>=<span class="string">"50dip"</span></div><div class="line">    <span class="attr">android:layout_marginBottom</span>=<span class="string">"10dip"</span></div><div class="line">    /&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">TextView</span>  </span></div><div class="line">    <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></div><div class="line">    <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">    <span class="attr">android:background</span>=<span class="string">"#FF0000"</span></div><div class="line">    <span class="attr">android:text</span>=<span class="string">"@string/hello"</span></div><div class="line">    <span class="attr">android:paddingLeft</span>=<span class="string">"50dip"</span></div><div class="line">    <span class="attr">android:paddingRight</span>=<span class="string">"50dip"</span></div><div class="line">    <span class="attr">android:paddingTop</span>=<span class="string">"50dip"</span></div><div class="line">    <span class="attr">android:paddingBottom</span>=<span class="string">"50dip"</span></div><div class="line">    <span class="attr">android:layout_marginBottom</span>=<span class="string">"10dip"</span></div><div class="line">    /&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<ul>
+<li>android:padding和android:layout_margin举例<br><img src="/images/1B_5.jpg" alt="padding 和margin 举例"></li>
+</ul>
+<h2 id="要点"><a href="#要点" class="headerlink" title="要点"></a>要点</h2><ul>
+<li>记得使用 明明空间 “xmlns:android=””</li>
+<li>熟练使用布局的几种属性值</li>
+</ul>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://yoursite.com/2016/08/10/1B_BuildingLayout/" data-id="ciro9yr8o0000s8uj2qry13mm" class="article-share-link">Share</a><div class="tags"></div><div class="post-nav"><a href="/2016/08/10/2AGoG0GO/" class="pre">Android入门教程（4）</a><a href="/2016/08/10/1A_BuildingLayout/" class="next">Android入门教程（1）</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://yoursite.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Categories</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/PS2/">Android入门教程（6）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/PS1+Coffee/">Android入门教程（3）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/MarkDownFormat/">发布 Markdown格式的帖子</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/3B/">Android入门教程（8）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/3A/">Android入门教程（7）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/2B_Happy/">Android入门教程（5）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/2AGoG0GO/">Android入门教程（4）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/1B_BuildingLayout/">Android入门教程（2）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/1A_BuildingLayout/">Android入门教程（1）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/hello-world/">Hello World</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Blogroll</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">Hexo.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
