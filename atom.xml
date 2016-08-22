@@ -148,7 +148,7 @@ Exception raised during rendering: com/android/util/PropertiesMap
     <link href="http://yoursite.com/2016/08/10/HowToBuildBlog/"/>
     <id>http://yoursite.com/2016/08/10/HowToBuildBlog/</id>
     <published>2016-08-10T03:26:37.015Z</published>
-    <updated>2016-06-06T04:26:20.077Z</updated>
+    <updated>2016-08-22T06:47:51.859Z</updated>
     
     <content type="html"><![CDATA[<h2 id="我的博客"><a href="#我的博客" class="headerlink" title="我的博客"></a>我的博客</h2><p><img src="/images/3.jpg" alt="我的blog"></p>
 <p>我的博客时在github上创建的静态博客 <a href="https://symbolic.github.io。" target="_blank" rel="external">https://symbolic.github.io。</a></p>
@@ -186,8 +186,6 @@ Hexo 的原作者是一名台湾的学生。推出的目的就是为了提供更
 <p>参考了Xuanwo’s Blog的<strong>[史上最详细的Hexo博客搭建图文教程]</strong>(<a href="https://xuanwo.org/2015/03/26/hexo-intor/" target="_blank" rel="external">https://xuanwo.org/2015/03/26/hexo-intor/</a>)</p>
 <p>如果你也用hexo在github上搭建静态博客，在搭建过程中遇到问题，欢迎跟帖或发私信。</p>
 <h2 id="名博分享"><a href="#名博分享" class="headerlink" title="名博分享"></a>名博分享</h2><p><a href="http://www.ruanyifeng.com/blog/" target="_blank" rel="external">阮一峰的博客</a></p>
-<p><a href="http://blog.sina.com.cn/msqygz" target="_blank" rel="external">如松的博客(财经)</a></p>
-<p><a href="https://program-think.blogspot.com/" target="_blank" rel="external"><strong><em>随</em></strong>便想<strong><em>想</em></strong></a></p>
 ]]></content>
     
     <summary type="html">
